@@ -1,0 +1,650 @@
+@import 'normalize.css';
+body{
+    font-family: 'Helvetica', arial;
+    box-sizing: border-box
+    background-color red
+}
+
+desktop = "(max-width:1023px) and (max-device-width:1023px)"
+tablet = "(max-width:767px) and (max-device-width:767px)"
+mobile = "(max-width:375px) and (max-device-width:375px)"
+
+
+.debug {
+    border 1px solid #000
+    box-sizing: border-box
+}
+
+.container{
+    position relative
+    margin: 0 auto
+    max-width: 1024px;
+    width: 100%;
+}
+
+.header{
+    background-color #fff
+    width: 100%
+    height 60px
+    float left
+    clear both
+    line-height: 60px
+    @media tablet {
+        height 68px
+        line-height: 68px
+    }
+   
+    &__logo{
+        margin-left 16px
+        height 60px
+        display flex
+        align-items: center
+        float left
+        cursor pointer
+        @media tablet {
+            height 68px
+        }
+    }
+    &__info{
+        float: right 
+        height 60px
+        clear right
+        line-height: 60px
+        display flex
+        align-items: center
+        margin 0
+        padding 0
+    }
+    &__feedback{
+        color: #2A3864;
+        border-bottom: 1px dashed #2A3864;  
+        padding: 0 
+        margin 0 4px
+        cursor pointer
+        height 15px
+        font-size: 11px
+        line-height: 15px
+        @media desktop {
+            margin 0 77px 0 0
+        }
+        @media tablet {
+           border: none
+            margin 0 16px 
+            width 72px
+            font-size: 12px
+            text-align: right 
+            line-height: normal
+            color: #1D3566;
+        }
+    }
+    &__time-working{
+        height 15px
+        font-size: 11px
+        line-height: 15px
+        color: #878787;
+        padding 0 12px;
+        border-right: 1px solid  #1D3566;
+        @media tablet {
+            display: none
+            
+        }
+    }
+    &__phone{
+        height 15px
+        line-height: 9px
+        font-size: 11px
+        padding 0 12px
+        margin: 0 12px 0 0
+        color: #1D3566;
+        clear both
+        @media tablet {
+            display: none
+            
+        }
+    }
+    &__phone_big{
+        font-size: 18px;
+        letter-spacing: 0.04em;
+        margin-right: 0
+        padding-right 0
+    }
+}
+
+.navbar{
+    height 48px
+    width: 100%
+    background-color: #1D3566;
+    color: white;
+    display flex
+    justify-content: center
+    &__burger{
+        margin-left 8px;
+        // float left
+    }
+    &__action{
+        display flex
+        justify-content: center
+        align-items: center
+        position absolute
+        right 0
+    }
+    &__box{
+        display flex
+        justify-content: center
+        align-items: center
+        cursor pointer
+        // float: left 
+        @media (min-device-width:376px) {
+            width: 48px
+            height 48px
+            margin-right 8px
+        }
+        @media (max-device-width:375px){
+            width: 48px
+            height 48px
+            margin-right 4px
+        }
+    }
+    &__box_hidden{
+        @media (min-device-width:376px) {
+            display none
+        }
+        @media (device-width:375px){
+            display flex
+        }
+    }
+}
+
+.menu{
+    width 100%
+    background-color: #E6EDEE
+    float left
+    clear: both
+
+    min-height: 50px
+    // @media (min-device-width:1024px){
+    //     height 50px
+    // }  
+    // @media (min-device-width:768px) and (max-device-width:1023px){
+    //     height 80px
+    // }   
+    // @media (min-device-width:376px) and (max-device-width:767px){
+        
+    // }
+    // @media (max-device-width:375px){
+    //     height 332px
+    // }
+
+    &__name{
+                display: none
+             @media desktop{
+                display: none
+            }   
+            @media tablet{
+                display: none
+            }
+            @media  mobile{
+                display: inline-block
+                width 100%
+                clear: both
+                margin-left:  16px
+                padding-top 10px
+            }
+    }
+    &__list{
+        list-style: none; 
+    }
+    &__item{
+        float left
+        height 50px
+        cursor: pointer;
+        user-select none
+        position: relative
+        min-width: (1024px / 10)
+        font-size 14px
+        box-sizing: border-box
+        padding 0 8px
+        @media tablet {
+            min-width 120px
+            margin-left 8px
+        }
+        @media mobile {
+            margin-left 0
+
+        }
+
+        // @media (min-device-width:1024px){
+        //     height 50px
+        //     padding-left: 15px
+        //     padding-right 14px
+        //     font-size: 13.5px;
+        //     line-height: 56px;
+        // }  
+        // @media (min-device-width:768px) and (max-device-width:1023px){
+        //     height 40px
+        //     width: 120px
+        //     margin-left: 8px
+        //     padding-left: 8px
+        //     padding-right 8px
+        //     cursor pointer
+        //     font-size: 14px;
+        
+        // }   
+        // @media (min-device-width:375px) and  (max-device-width:767px){
+        //     width: 140px;
+        //     height 40px;
+        //     margin-left: 8px
+        //     padding-left: 8px
+        //     padding-right 8px
+        //     margin: 0 auto
+        //     font-size: 16px;
+        //     line-height: 48px;
+        
+        // }
+        // @media  (max-device-width:375px){
+        //     width: 140px;
+        //     height 48px;
+        //     margin-left: 8px
+        //     padding-left: 16px
+        //     padding-right 8px
+        //     font-size: 16px;
+        //     line-height: 48px;
+        // }
+    }
+    &__select{
+        position: absolute
+        top 50px
+        left 0
+        width 1024px
+        box-sizing: border-box
+        background-color #fff
+        border 2px solid black
+        min-height: 590px
+        z-index 1
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-gap: 24px
+        padding: 27px 8px
+        @media desktop{
+            width: 768px 
+            top 40px           
+        }
+        // @media (min-device-width:1024px){
+        //     height 590px
+        //     background-color #fff
+        //     margin 0
+        //     // margin-top 50px
+        //     border 2px solid black
+
+        // }  
+        // @media (min-device-width:768px) and (max-device-width:1023px){
+        //     display: none
+
+        // }   
+        // @media (min-device-width:376px) and  (max-device-width:767px){
+        //     display: none
+        // }
+        // @media  (max-device-width:375px){
+        //     display: inline-block
+        //     width 100%
+        //     clear: both
+        //     margin-left:  16px
+        //     padding-top 10px
+        }
+        &__box{
+        color:  #1D3566;
+        font-family: AGPresquire Arial, Helvetica, sans-serif;
+        font-size: 13px
+        line-height 43px
+        padding: 0px 8px
+        }
+        &__box-title{
+            font-size: 18px;
+            line-height: 13px;
+        } 
+        &__box-list{
+            list-style none 
+            margin 0
+            padding: 0
+        }
+    
+        &__item:hover, &__item_active{
+            background-color #fff   
+            & ^[0]__select{
+
+            } 
+        }
+    
+        &__title{
+            cursor pointer
+            line-height 50px
+            text-align center
+            display block
+            line-height 40px
+         }
+    }
+
+
+
+//components
+// all icons
+.icon {
+    fill: currentColor;
+    stroke:currentColor;
+}
+
+// плашка для карточки товара product.html
+
+.product{
+    width 320px
+    height 272px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    position: relative
+    background-color: white
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @media desktop{
+        width: 240px
+    }
+    @media tablet{
+        width: 168px
+    }
+    &__photo{
+        margin-top 4px
+        cursor pointer
+        user-select none
+    }
+    &__description{
+        width 304px
+        padding: 0 8px 0 8px
+        color: #1D3566;
+        font-size: 13px
+        line-height 16px
+        bottom 24px
+        position absolute
+        @media desktop{
+            width: 224px
+            
+        }
+        @media tablet{
+            width: 152px
+        }
+    }
+    &__price{
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+    &__like{
+        position absolute
+        right 4px
+        bottom: 0
+        cursor pointer
+    }
+    &__like_active{
+        color: #FF5414;
+    }
+}
+//длинные карточки товара
+.card-product{
+    background: #FFFFFF;
+    width: 100%
+    padding: 8px 0
+    clear both
+    cursor: pointer
+    &__boxes{
+        height 152px
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        margin: 0 16px
+        
+    }
+    &__main-info{
+        display block
+        padding:16px 16px 0px 16px
+        height 48px
+        clear both
+        line-height: 16px;
+    }
+    &__photo{
+        width: 48px
+        height 48px
+        float left
+    }
+    &__image{
+        width: 48px
+        height 48px
+    }
+    &__description{
+        float left
+        font-size: 13px;
+        color: #1D3566;
+        height 48px
+        margin-left 8px
+        margin-top 4px
+
+    }
+    &__price{
+        float: right 
+        font-size: 16px;
+        color: #000000;
+    }
+    &__characteristic{
+        display block
+        clear both
+        font-size: 12px;
+        line-height: 24px;
+        color: #000000;
+    }
+    &__row{
+        display flex
+        margin-left: 68px
+    }
+    &__label{
+        width: 62px
+    }
+    &__value{
+        width: 223px
+        margin-left: 32px
+    }
+
+}
+// плашка для акции sale.html
+.sale{
+    position relative
+    background-color #fff
+    width 320px
+    height 272px
+    display flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content flex-start
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor pointer
+    margin: 0 16px 0 0
+    padding: 0
+    @media desktop{
+        width: 240px
+    }
+    @media tablet {
+        width: 168px
+    }
+    &__description{
+        margin 18px 0 0 16px
+        line-height: 32px;
+        z-index: 2
+    }
+    &__title{
+        font-size: 22px;
+        color: #000000;
+        font-weight bolder
+        &_value{
+            color: #71ACDC
+        }
+    }
+    &__text{
+        color: #1D3566;
+        font-size: 12px
+        line-height: 22px;
+    }
+    &__label{
+        position absolute
+        top 48px
+        left 0
+        z-index: 0
+        width: 100%
+        display flex
+        justify-content: center
+        height 168px
+    }
+    &__image{
+        width: 100%
+        height 100%
+    }
+    &__period{
+        background-color #434E71;
+        position absolute
+        bottom 14px
+        width 158px
+        height 40px
+        line-height: 14px
+        font-size: 14px;
+        ::after{
+            content: ''
+            position absolute
+            border: 20px solid transparent;
+            border-right: 20px solid white;
+            top 0
+            right 0
+        }
+    }
+    &__date{
+        color: #FFFFFF;
+        margin-left 16px
+    }
+}
+
+//акции promotion.html
+.promotion{
+    background-color #fff;
+    height 352px
+    display flex
+    flex-direction: column
+    // justify-content flex-start
+    // align-items flex-start
+    padding: 16px 0 0 16px
+    margin: 0
+    position: relative
+    &__title{
+        font-size: 22px;
+        line-height: 32px;
+        color: #1D3566;
+        padding 0
+        margin 0
+    }
+    &__box{
+        display flex
+        justify-content: space-between
+        // align-items: flex-start
+        position absolute
+        top: 56px
+    }
+        &__item_hidden{
+            display inline
+        @media tablet {
+            display none
+        }
+        
+    }
+}
+
+.footer{
+    position relative
+    height 188px
+    background: #1D3566;
+    color: #E6EDEE;
+    font-family: 'AGPresquire', arial;
+    &__phone{
+        font-size: 24px
+        line-height 24px
+        padding: 22px 0 0 24px
+    }
+    &__text{
+        font-size: 13px;
+        line-height: 16px;
+        color: #FFFFFF;
+        padding-left 24px
+    }
+    &__buttons{
+        width: 100%
+        display flex
+        position absolute
+        top: 96px
+        left 0
+    }
+    &__subscription{
+        margin: 0
+        padding 0
+        width: 123px
+        height 52px
+        background-color #fff
+        font-size: 13px;
+        line-height: 52px;
+        color: #1D3566;
+        float left
+        position relative
+        cursor pointer
+        user-select none
+
+    }
+    &__subscription::after{
+        content: ''
+        position absolute
+        top: 0
+        right -52px
+        border: 26px solid transparent; 
+        border-left: 26px solid white;
+    }
+    &__label{
+        width: 89px
+        line-height: 13px;
+        margin-left: 24px
+    }
+    &__messages{
+        position absolute
+        right 0
+        bottom: 0
+        display flex
+        margin-right 4px
+        
+    }
+    &__box{
+        width: 52px
+        height 52px
+        margin 0 8px 0 0
+        display flex
+        justify-content: center
+        align-items: center
+    }
+    &__facebook, &__vk, &__google{
+        width: 37px
+        height 37px
+        background: #71ACDC;
+        transform: rotate(-45deg);
+        border: none
+        display flex
+        justify-content: center
+        align-items: center
+        cursor pointer
+    }
+    &__icon{
+        transform: rotate(45deg);
+        user-select none
+    }
+}
