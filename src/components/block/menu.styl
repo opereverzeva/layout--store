@@ -1,0 +1,94 @@
+@import '../components/elements/open-menu.styl';
+
+desktop = "(max-width:1023px) and (max-device-width:1023px)"
+tablet = "(max-width:767px) and (max-device-width:767px)"
+mobile = "(max-width:375px) and (max-device-width:375px)"
+
+.menu{
+    width 100%
+    background-color: var(--grey-background-color)
+    float left
+    clear: both
+    min-height: 50px
+    position: relative
+    @media desktop {
+        min-height 80px
+    }
+    &__name{
+        display: none
+        width 100%
+        clear: both
+        margin-left:  16px
+        padding-top 10px
+        color: var(--main-text-color)
+        @media mobile{
+            display: inline-block
+        }
+    }
+    &__list{
+        list-style: none; 
+        width: 100%
+
+    }
+    &__item{
+        float left
+        height 50px
+        cursor: pointer;
+        user-select none
+        position: relative
+        min-width: (1024px / 10)
+        font-size 14px
+        box-sizing: border-box
+        padding 0 8px
+        line-height: 50px
+        @media desktop{
+            line-height 40px
+            height 40px
+            min-width 120px
+            margin-left 16px
+            padding-left: 8px
+            padding-right 8px
+        }
+        @media tablet {
+            width: 120px
+            text-align: start
+            margin 0  0 0 40px
+            padding: 0 30px 0 0
+            display flex
+            justify-content: flex-start
+            line-height 48px
+            height 48px
+            
+        }
+
+    }
+        &__title{
+            cursor pointer
+            line-height 50px
+            text-align center
+            display block
+            @media desktop{
+                line-height 40px          
+            }
+            @media tablet{
+                line-height 48px          
+            }
+         }
+    
+    
+        &__item:hover, &__item_active{
+            background-color var(--main-color)
+            & ^[0]__select{
+
+            } 
+        }
+        &__open-section{
+            display none
+        }
+        &__open-section_active{
+            display block
+        }
+
+    }
+
+

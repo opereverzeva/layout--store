@@ -1,0 +1,52 @@
+@import '../components/block/modal-filter.styl';
+
+.modal-filter{
+    &__title_element{
+        margin-left -50px
+    }
+    &__back{
+        margin-left 10px
+        line-height 36px
+        cursor pointer
+    }
+    &__row{
+        display flex
+        align-items: center
+        height 48px
+        border-bottom 1px solid #CDD8DA 
+        position relative
+        background-color var(--grey-background-color)
+    }
+    &__input{
+        display none
+    }
+    &__name-input{
+        padding-left 48px
+        height: 48px
+        &:before{
+            content: ''
+            display inline-block
+            width: 18px
+            height 18px
+            margin-right 15px
+            border-radius: 50%
+            border: 2px solid var(--main-text-color)
+            box-shadow: 0 1px 1px -1px var(--main-text-color)
+            position absolute
+            top 13px
+            left 15px
+            cursor pointer
+        }
+    }
+    
+
+}
+.modal-filter__input[type=radio]:checked+.modal-filter__name-input:before{
+        content: '\2022'
+        color: var(--main-text-color)
+        font-size: 44px
+        text-align  start
+        line-height 18px
+        padding-right 1px
+        text-align center
+}

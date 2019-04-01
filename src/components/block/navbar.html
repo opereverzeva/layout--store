@@ -1,8 +1,14 @@
 <nav class="navbar">
     <div class="container">
-        <div class="navbar__burger navbar__box">
-            <extends src="./src/components/icons/burger-menu.html">
-            </extends>
+        <div class="navbar__burger">
+            <div class="navbar__box navbar__box_burger">
+                <extends src="./src/components/icons/burger-menu.html">
+                </extends>
+            </div>
+            <div class="navbar__open-menu">
+                <extends src="./src/components/elements/burger-menu.html">
+                </extends>
+            </div>
         </div>
         <section class="navbar__action">
             <div class="navbar__box navbar__box_hidden">
@@ -28,3 +34,4 @@
         </section>
     </div>
 </nav>
+<script src="../components/block/navbar.js"></script>

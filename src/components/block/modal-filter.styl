@@ -1,0 +1,126 @@
+desktop = "(max-width:1023px) and (max-device-width:1023px)"
+tablet = "(max-width:767px) and (max-device-width:767px)"
+mobile = "(max-width:375px) and (max-device-width:375px)"
+
+.modal-filter{
+    position absolute
+    top 50%
+    left 50%
+    margin: -314px 0 0 -304px
+    width: 608px
+    height 628px
+    display: flex
+    flex-direction: column
+    background-color: var(--grey-background-color)
+    color: var(--main-text-color)
+    font-size: 16px
+    line-height: 48px
+    @media tablet{
+        width: 100%
+        margin 0
+        height 100vh
+        top 0
+        left 0
+    }
+
+    &__header{
+        width: 100%
+        height 48px
+        display flex
+        align-items: center
+        border-bottom 1px solid   #CDD8DA 
+        background-color var(--grey-background-color)
+    }
+    &__title{
+        width: 100%
+        text-align: center
+    }
+    &__close{
+        position absolute
+        text-align: center 
+        line-height 40px
+        width 40px
+        height 40px
+        right 10px
+        top 4px
+        font-size: 20px
+        cursor pointer
+    }
+    &__main{
+        
+    }
+    &__label{
+        background-color var(--main-color)
+        color: var(--no-active-button-color)
+        font-size: 15px
+        padding-left: 16px
+    }
+    &__item{
+        padding-left: 16px
+        padding-right 10px
+        display flex
+        justify-content space-between
+        border-bottom 1px solid   #CDD8DA 
+        background-color var(--grey-background-color)
+    }
+    &__link{
+        text-decoration: none 
+        color: var(--main-text-color)
+        display flex
+        justify-content: space-between
+        align-items: center
+    }
+    &__choose{
+        display flex
+        justify-content: space-between
+    }
+    &__open{
+        display block
+        text-align: center 
+        line-height 40px
+        width 40px
+        height 40px
+        font-size: 40px
+        font-weight 100
+    }
+    &__select{
+        padding-left: 16px
+        padding-right 18px
+        display flex
+        justify-content space-between
+        align-items: center
+        border-bottom 1px solid   #CDD8DA
+    }
+    &__turn{
+        width: 38px
+        height 24px
+        background: #CDD8DA;
+        border-radius: 4px;
+        display flex
+        align-items: center
+        justify-content flex-start
+    }
+    &__marker{
+        width: 20px
+        height 20px
+        background-color var(--grey-background-color)
+        border-radius: 4px
+        margin-left: 2px
+        cursor pointer
+    }
+    &__footer{
+        background-color var(--background-button-color)
+        position absolute
+        bottom 0
+        left 0
+        text-align: center
+        width 100%
+        cursor pointer
+    }
+    &__show-result{
+        text-transform: uppercase
+        text-decoration: none
+        color var(--main-color)
+        font-weight bold
+    }
+}

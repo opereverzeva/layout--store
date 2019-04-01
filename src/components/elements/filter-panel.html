@@ -1,0 +1,64 @@
+<section class="filter-panel">
+    <div class="container">
+        <div class="filter-header">
+            <div class="filter-header__menu">
+                <ul class="filter-header__menu-list">
+                    <li class="filter-header__item">
+                        <p class="filter-header__name">Главная</p>
+                    </li>
+                    <li class="filter-header__item">&bull;</li>
+                    <li class="filter-header__item">
+                        <p class="filter-header__name">
+                            Сантехника
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-header__navigation">
+                <div class="filter-header__title">
+                    Тумбы под стиральную машину
+                </div>
+                <div class="filter-header__icons">
+                    <div class="filter-header__type-sort">
+                        <extends src="./src/components/icons/grid-for-search.html">
+                        </extends>
+                    </div>
+                    <div class="filter-header__type-sort filter-header__type-sort_active">
+                        <extends src="./src/components/icons/list-for-search.html">
+                        </extends>
+                    </div>
+                    <div class="filter-header__type-sort">
+                        <extends src="./src/components/icons/simple-list-for-search.html">
+                        </extends>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-header__sort">
+                <div class="filter-header__sort-title">Сортировать:</div>
+                <nav class="filter-header__navbar">
+                    <div class="filter-header__nav-box label">
+                        <p class="label__text">По умолчанию</p>
+                    </div>
+                    <div class="filter-header__nav-box label label_default">
+                        <p class="label__text">По цене</p>
+                    </div>
+                    <div class="filter-header__nav-box label label_default">
+                        <p class="label__text">По рейтингу</p>
+                    </div>
+                </nav>
+                <div class="filter-header__checkbox">
+                    <input type="checkbox" id="checkbox" class="filter-header__checkbox-input">
+                    <label for="#checkbox">Новинки вверху списка</label>
+                </div>
+                <div class="filter-header__filter label">
+                    <p class="label__text">Фильтры
+                        <div class="filter-header__marker">
+                            1
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../components/elements/filter-panel.js"></script>
