@@ -1,0 +1,155 @@
+// панель фильтра
+.filter-panel{
+    background-color var(--main-color)
+}
+.panel-filter-header{
+    clear both
+    padding 0 12px
+    height: 132px
+    position: relative
+    &__menu{
+        color var(--main-text-color)
+        font-size: 14px
+        line-height 34px
+        height 34px
+       
+    }
+    &__menu-list{
+        list-style none
+        display flex
+        margin 0
+        padding 16px 0 0 0
+        height 16px
+    }
+    &__item{
+        padding: 0 4px
+        user-select: none
+        position relative
+    }
+    &__name{
+        display inline
+        cursor pointer
+    }
+    &__navigation{
+        margin 0
+        padding 0
+        line-height 48px
+        height 48px
+        display flex
+        justify-content: space-between
+    }
+    &__title{
+        color: var(--price-color)
+        font-size: 26px
+        line-height 52px
+        text-align: center
+        margin 0
+        padding 0
+        margin-left: 4px
+        text-align: center
+        position relative
+
+    }
+    &__icons{
+        display flex
+        align-items: center
+
+    }
+    &__type-sort{
+        background-color inherit
+        color: var(--no-active-button-color)
+        cursor: pointer
+        width: 44px
+        height: 44px
+        text-align: center
+        transition: 0.3s
+        text-decoration: none
+        &:hover{
+            transform: scale(1.1)
+            transition: 0.3s
+        }
+        &_active{
+            color: var(--main-text-color)
+        }
+    }
+    &__sort{
+        position relative
+        height 48px
+        display flex
+        align-items: center
+        padding: 0 4px
+    }
+    &__sort-title{
+        float left
+        color:  #626262;
+    }
+    &__nav-box{
+        transition: 0.1s
+    }
+    &__nav-box:hover{
+        transform: scale(1.05)
+        transition: 0.1s
+    }
+    &__navbar{
+        margin-left: 12px
+        margin-right: 8px
+        display flex
+        justify-content: space-between
+        width 362px
+        float left
+        clear: both
+    }
+    &__checkbox{
+        height  48px
+        display flex
+        align-items: center
+        float left
+        clear: both
+        margin-left: 12px
+        flex-grow 1
+    }
+    // &__checkbox-input{
+    //     display none
+    // }
+    // &__checkbox-label:before{
+    //     content: ''
+    //     width: 16px
+    //     height 16px
+    //     padding-right: 16px
+    //     border: 1px solid var(--main_text-color)
+    //     background-color var(--main_text-color)
+    //     color: var(--main-color)
+    //     border-radius: 4px
+    //     position absolute
+    //     top 16px
+    //     left 12px
+    //     cursor pointer
+    // }
+    // &__checkbox-input:checked + &__checkbox-label::before{
+    //     content: '5464'
+    //     }
+    &__filter{
+        clear: both
+        display flex
+        justify-content: center
+        align-items: center
+        padding 0 16px
+        
+    }
+    &__label-text{
+        color: var(--price-color)
+    }
+    &__marker{
+        display inline
+       width: 22px
+       height 22px
+       border-radius: 50%
+       background-color var(--heart-active-color) 
+       color: var(--main-color)
+        margin-left 5px
+        font-size: 12px
+        line-height 22px
+
+    }
+}
+//сортировки и фильтры

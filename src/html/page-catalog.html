@@ -8,20 +8,27 @@
     <link href="http://allfont.ru/allfont.css?fonts=agpresquire" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/style.styl">
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type='text/javascript' src='../js/index.js'></script>
     <title>Сантехника</title>
 </head>
 
-<body>
+<body class='hidden'>
+
     <extends src="./src/components/block/header.html">
     </extends>
     <extends src="./src/components/block/navbar.html">
     </extends>
     <extends src="./src/components/block/menu.html">
     </extends>
+    <extends src="./src/components/block/filter.html">
+    </extends>
 
     <extends src="./src/components/block/footer.html">
     </extends>
-
+    <div class="modal-window">
+        <extends src="./src/components/block/serial-modals-windows.html">
+        </extends>
+    </div>
 </body>
 
 </html>

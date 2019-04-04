@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import '../components/block/menu.styl';
+@import '../components/block/serial-modals-windows.styl';
 @import '../components/block/modal-filter.styl';
 @import '../components/block/type-filter.styl';
 @import '../components/block/form-filter.styl';
@@ -8,12 +9,26 @@
 @import '../components/block/slider-brend.styl';
 @import '../components/block/main-first-page.styl';
 @import '../components/block/contact.styl';
+@import '../components/block/filter.styl';
+@import '../components/block/brend.styl';
+@import '../components/block/goods.styl';
 
+html, body{
+    height 100%
+}
+.wrapper{
+    position relative
+    min-height 100%
+    }
 body{
     font-family: 'Helvetica', arial;
     box-sizing: border-box
-    background-color var(--main-olor)
+    background-color var(--main-color)
+  
 }
+.hidden_active{
+    overflow hidden
+    }
 
 :root{
     --main-color: #ffffff
@@ -25,6 +40,14 @@ body{
     --heart-active-color: #ff5414
     --background-button-color: #71acdc
     --no-active-button-color: #878787
+}
+
+//работа модального окна
+.modal-window{
+    display none
+    &_active{
+        display block
+    }    
 }
 
 desktop = "(max-width:1023px) and (max-device-width:1023px)"
@@ -192,7 +215,6 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 // all icons
 .icon {
     fill: currentColor;
-    stroke:currentColor;
 }
 //label
 .label{
@@ -203,8 +225,11 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
     text-align: center
     cursor: pointer
     color: var(--main-text-color)
+    text-decoration: none
     &__text{
         font-size: 15px
+        line-height 48px
+        margin 0
         padding: 0 16px
         user-select none
         height 100%
@@ -310,16 +335,19 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 .card-product{
     background: var(--main-color)
     width: 100%
-    padding: 8px 0
+    padding: 0
     clear both
     cursor: pointer
+    
     &__boxes{
         height 152px
         background: var(--main-color)
         box-shadow: 0px 0px 4px var(--box-shadow-color)
         border-radius: 4px;
         margin: 0 16px
-        
+        &_simple{
+        height 72px
+    }
     }
     &__main-info{
         display block
@@ -445,109 +473,7 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         margin-left 16px
     }
 }
-// панель фильтра
-.filter-panel{
-    background-color var(--main-color)
-}
-.filter-header{
-    clear both
-    padding 0 12px
-    height: 132px
-    position: relative
-    &__menu{
-        color var(--main-text-color)
-        font-size: 14px
-        line-height 34px
-        height 34px
-       
-    }
-    &__menu-list{
-        list-style none
-        display flex
-        margin 0
-        padding 16px 0 0 0
-        height 16px
-    }
-    &__item{
-        padding: 0 4px
-        user-select: none
-        position relative
-    }
-    &__name{
-        display inline
-        cursor pointer
-    }
-    &__navigation{
-        margin 0
-        padding 0
-        line-height 48px
-        height 48px
-        display flex
-        justify-content: space-between
-    }
-    &__title{
-        color: var(--price-color)
-        font-size: 26px
-        text-align: center
-        margin-left: 4px
-        text-align: center
-        position relative
 
-    }
-    &__icons{
-        display flex
-        align-items: center
-
-    }
-    &__type-sort{
-        color: var(--no-active-button-color)
-        cursor: pointer
-        width: 44px
-        height: 44px
-        text-align: center
-        &_active{
-            color: var(--main-text-color)
-        }
-    }
-    &__sort{
-        // position absolute
-        height 48px
-        // bottom: 0
-        // left 0
-        display flex
-        align-items: center
-        padding: 0 4px
-    }
-    &__sort-title{
-        float left
-    }
-    &__navbar{
-        margin-left: 12px
-        margin-right: 8px
-        display flex
-        justify-content: space-between
-        width 362px
-        float left
-    }
-    &__checkbox{
-        display flex
-        align-items: center
-        
-    }
-    &__checkbox-input:checked{
-        color red
-    }
-    &__marker{
-        display inline
-       width: 22px
-       height 22px
-       border-radius: 50%
-       background-color var(--heart-button-color) 
-       color: var(--main-color)
-
-    }
-}
-//сортировки и фильтры
 
 //акции promotion.html
 .promotion{
@@ -591,8 +517,10 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 }
 
 .footer{
-    position relative
+    margin 0
+    position absolute
     height 188px
+    width: 100%
     background: var(--main-text-color)
     color: var(--grey-background-color)
     font-family: 'AGPresquire', arial;

@@ -3,7 +3,8 @@ tablet = "(max-width:767px) and (max-device-width:767px)"
 mobile = "(max-width:375px) and (max-device-width:375px)"
 
 .modal-filter{
-    position absolute
+    position fixed
+   
     top 50%
     left 50%
     margin: -314px 0 0 -304px
@@ -107,8 +108,14 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         border-radius: 4px
         margin-left: 2px
         cursor pointer
+        &_on{
+            background-color var(--main-text-color)
+            margin-left 16px
+        }
     }
     &__footer{
+        border: 0
+        height 48px
         background-color var(--background-button-color)
         position absolute
         bottom 0
@@ -124,3 +131,5 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         font-weight bold
     }
 }
+
+

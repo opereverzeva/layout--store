@@ -1,0 +1,186 @@
+.main-parametr-goods{
+    width 100%
+    background-color var(--grey-background-color)
+    &__content{
+        width 100%
+        position relative
+        padding-left 16px
+    }
+    &__title{
+        width 327px
+        padding  23px 0 16px 0px
+        height 48px
+        font-size: 16px
+        line-height 24px
+        color: var(--price-color)
+     }
+    &__repost{
+        position: absolute
+        top 18px
+        right 16px
+        display flex
+        justify-content: space-between
+        width 214px
+        height 36px
+
+    }
+    &__repost-label{
+        color: var(--price-color)
+        height 17px
+        font-size: 13px
+    }
+    &__repost-boxes{
+        height 100%
+        width 124px
+        display flex
+        justify-content: space-between
+        align-items: center
+    }
+    &__box{
+        width: 36px
+        height 36px
+        margin 0 
+        display flex
+        justify-content: space-between
+        align-items: center
+    }
+    &__facebook, &__vk, &__google{
+        width: 26px
+        height 26px
+        background:var(--background-button-color)
+        transform: rotate(-45deg);
+        border: none
+        display flex
+        justify-content: center
+        align-items: center
+        cursor pointer
+    }
+    &__icon{
+        transform: rotate(45deg);
+        user-select none
+        height 15px
+        width 15px
+    }
+    &__amount{
+        width 144px
+        height 66px
+        margin 0
+        padding 0
+    }
+    &__amount-title{
+        height 20px
+        font-size: 10px
+        line-height 20px
+        color: var(--main-text-color)
+    }
+    &__change{
+        width 144px
+        height 48px
+        margin 0
+        padding 0
+        color: var(--main-text-color)
+        display flex
+    }
+    &__change-button{
+        width 48px
+        height 48px
+        background-color var(--main-color)
+        border: 1px solid #D2D7E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        text-align: center
+        line-height 48px
+        font-size: 2em
+        cursor pointer
+    }
+    &__change-item{
+        width 48px
+        height 48px
+        text-align: center
+        line-height 48px
+        font-size: 16px
+    }
+    &__info-about-cost{
+        display flex
+    }
+    &__price{
+        margin 18px 8px 45px 0
+        height 32px
+        font-size: 22px
+        line-height 32px
+        color var(--price-color)
+    }
+    &__feedback{
+        margin 27px 0 51px 0
+        height 17px
+        width 106px
+        font-size: 13px
+        line-height 17px
+        color var(--background-button-color)
+        border-bottom: 1px dashed var(--background-button-color)
+        cursor pointer
+        &_credit{
+            margin 0
+            padding 0
+        }
+    }
+    &__info-about-cost{
+        width 500px
+    }
+    &__buy{
+        width 343px
+        height 62px
+        position: absolute
+        right 22px
+        bottom 30px
+        display flex
+        justify-content: space-between
+        align-items: center
+        
+    }
+    &__credit{
+        height 34px
+        line-height 17px
+        font-size: 13px
+    }
+    &__text{
+        color: var(--price-color)
+        margin 0
+        padding 0
+        font-weight 600
+    }
+    &__button{
+        position relative
+        width 200px
+        height 52px
+        background-color var(--background-button-color)
+        color: var(--main-color)
+        font-size: 18px
+        line-height 52px
+        text-align right
+    }
+    &__button-name{
+        padding-right 20px
+    }
+    &__basket{
+        position: absolute
+        left 18px
+        top 5px
+        width: 37px
+        height 37px
+        background:var(--background-button-color)
+        transform: rotate(-45deg);
+        border: 3px solid var(--grey-background-color)
+        box-sizing: content-box
+        display flex
+        justify-content: center
+        align-items: center
+        cursor pointer
+    }
+    &__basket-icon{
+        transform: rotate(45deg);
+        user-select none
+        height 40px
+        width auto
+    }
+}
