@@ -70,4 +70,17 @@ $(() => {
         event.stopPropagation();
         $('.modal-filter__marker').toggleClass('modal-filter__marker_on')
     });
+
+    //добавление товара в корзину
+    $('.main-parametr-goods__button, .card-add-goods__add').click(function (event) {
+        // event.preventDefault();
+        $('.modal-window').addClass('modal-window_active')
+        $('.hidden').addClass('hidden_active')
+    });
+
+    //закрытие модального окна
+    $(".overlay__modal-add-basket, .modal-add-basket__close").click(function (event) {
+        $('.modal-window').removeClass('modal-window_active')
+        $('.hidden').removeClass('hidden_active')
+    });
 })

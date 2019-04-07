@@ -10,6 +10,7 @@
         margin 0
         margin: 0 0 0 16px 
         border-bottom 1px solid #CDD8DA
+        box-sizing: padding-box
     }
     &__date{
         height 100%
@@ -26,5 +27,19 @@
         font-weight 700
         font-size: 14px
         padding-left 8px
+    }
+    &__button{
+        border none 
+        background-color inherit
+        color: var(--main-text-color)
+        width 60px
+        height 48px
+        display flex
+        justify-content: center
+        align-items: center
+        cursor pointer
+        &_open{
+            transform: rotate(180deg)
+        }
     }
 }

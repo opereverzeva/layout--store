@@ -8,10 +8,11 @@
     <link href="http://allfont.ru/allfont.css?fonts=agpresquire" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/style.styl">
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script type='text/javascript' src='../js/index.js'></script>
     <title>Story</title>
 </head>
 
-<body>
+<body class="hidden">
     <div class="wrapper">
         <extends src="./src/components/block/header.html">
         </extends>
@@ -21,13 +22,20 @@
         </extends>
         <extends src="./src/components/block/goods.html">
         </extends>
-
+        <extends src="./src/components/block/add-goods.html">
+        </extends>
+        <extends src="./src/components/block/contact.html">
+        </extends>
 
     </div>
 
     <extends src="./src/components/block/footer.html">
     </extends>
 
+    <div class="modal-window">
+        <extends src="./src/components/block/modal-add-basket.html">
+        </extends>
+    </div>
 </body>
 
 </html>

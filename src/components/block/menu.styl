@@ -7,10 +7,15 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 .menu{
     width 100%
     background-color: var(--grey-background-color)
-    float left
+    // float left
     clear: both
     min-height: 50px
     position: relative
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
     @media desktop {
         min-height 80px
     }
@@ -36,7 +41,7 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         cursor: pointer;
         user-select none
         position: relative
-        min-width: (1024px / 10)
+        min-width: (1023px / 10)
         font-size 14px
         box-sizing: border-box
         padding 0 8px

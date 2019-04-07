@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../components/icons/Star.svg":[["Star.2cb13e62.svg","../components/icons/Star.svg"],"../components/icons/Star.svg"],"./../components/icons/star-active.svg":[["star-active.d1b0d6d4.svg","../components/icons/star-active.svg"],"../components/icons/star-active.svg"],"./../components/icons/not-like.svg":[["not-like.c467da4d.svg","../components/icons/not-like.svg"],"../components/icons/not-like.svg"],"./../components/icons/heart-added.svg":[["heart-added.be9adb82.svg","../components/icons/heart-added.svg"],"../components/icons/heart-added.svg"],"_css_loader":"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../components/icons/Star.svg":[["Star.2cb13e62.svg","../components/icons/Star.svg"],"../components/icons/Star.svg"],"./../components/icons/star-active.svg":[["star-active.d1b0d6d4.svg","../components/icons/star-active.svg"],"../components/icons/star-active.svg"],"./../components/icons/not-like.svg":[["not-like.c467da4d.svg","../components/icons/not-like.svg"],"../components/icons/not-like.svg"],"./../components/icons/heart-added.svg":[["heart-added.be9adb82.svg","../components/icons/heart-added.svg"],"../components/icons/heart-added.svg"],"./../components/icons/Rectangle.svg":[["Rectangle.898ee292.svg","../components/icons/Rectangle.svg"],"../components/icons/Rectangle.svg"],"_css_loader":"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38659" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

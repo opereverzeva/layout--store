@@ -1,0 +1,28 @@
+<form action="" class="basket-form">
+    <label for="name" class="basket-form__name">Ваше имя</label>
+    <input type="text" name="name" id="name" class="basket-form__input">
+
+    <label for="phone" class="basket-form__name">Телефон</label>
+    <input type="tel" name="phone" id="phone" class="basket-form__input" placeholder="+7 (123) 456 78 90">
+
+    <label for="e-mail" class="basket-form__name">E-mail</label>
+    <input type="email" name="email" id="e-mail" class="basket-form__input" placeholder="email@forexample.ru">
+
+    <div class="basket-form__name-option">Способ доставки</div>
+    <div class="basket-form__option">
+        <input type="radio" name="delivery" id="delivery" class="basket-form__radio">
+        <label for="delivery" class="basket-form__name-radio">
+            <h3 class="basket-form__radio-title">Доставка</h3>
+            <p class="basket-form__radio-description">
+                Осуществляется в течении 1-2 дней с момента подтверждения заказа.
+            </p>
+        </label>
+        <input type="radio" name="delivery" id="no-delivery" class="basket-form__radio">
+        <label for="no-delivery" class="basket-form__name-radio">
+            <h3 class="basket-form__radio-title">Самовывоз</h3>
+            <p class="basket-form__radio-description">
+                Вы можете самостоятельно забрать заказ из нашего магазина
+            </p>
+        </label>
+    </div>
+</form>

@@ -249,6 +249,17 @@ $(function () {
     event.preventDefault();
     event.stopPropagation();
     $('.modal-filter__marker').toggleClass('modal-filter__marker_on');
+  }); //добавление товара в корзину
+
+  $('.main-parametr-goods__button, .card-add-goods__add').click(function (event) {
+    // event.preventDefault();
+    $('.modal-window').addClass('modal-window_active');
+    $('.hidden').addClass('hidden_active');
+  }); //закрытие модального окна
+
+  $(".overlay__modal-add-basket, .modal-add-basket__close").click(function (event) {
+    $('.modal-window').removeClass('modal-window_active');
+    $('.hidden').removeClass('hidden_active');
   });
 });
 },{"./Ticker":"../js/Ticker.js"}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -279,7 +290,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38659" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39657" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

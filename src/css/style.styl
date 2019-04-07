@@ -1,4 +1,6 @@
 @import 'normalize.css';
+
+
 @import '../components/block/menu.styl';
 @import '../components/block/serial-modals-windows.styl';
 @import '../components/block/modal-filter.styl';
@@ -12,6 +14,9 @@
 @import '../components/block/filter.styl';
 @import '../components/block/brend.styl';
 @import '../components/block/goods.styl';
+@import '../components/block/modal-add-basket.styl'; 
+@import '../components/block/page-company.styl'; 
+@import '../components/block/basket.styl';
 
 html, body{
     height 100%
@@ -207,6 +212,10 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         @media (device-width:375px){
             display flex
         }
+    }
+    &__link{
+        text-decoration none
+        color: inherit
     }
 }
 

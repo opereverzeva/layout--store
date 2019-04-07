@@ -1,0 +1,102 @@
+.page-company{
+    background-color var(--main-color)
+    position: relative
+    margin: 30px 20px 16px 16px
+    &__menu{
+        color var(--main-text-color)
+        font-size: 14px
+        line-height 34px
+        height 34px
+        width 100%
+    }
+    &__menu-list{
+        list-style none
+        display flex
+        margin 0
+        padding 0
+        height 16px
+        
+    }
+    &__menu-item{
+        padding: 0 4px
+        user-select: none
+        position relative
+    }
+    &__name{
+        display inline
+        cursor pointer
+        text-decoration none
+        color inherit
+    }
+    &__title-page{
+        margin 0
+        padding 6px 0 16px 0
+        height 32px
+        line-height 32px
+        cursor: auto
+        color: var(--price-color)
+        &_article{
+            height 64px
+        }
+    }
+    &__nav{
+        width 992px
+        border-bottom 1px solid var(--grey-background-color)
+    }
+    &__navbar{
+        display flex
+        justify-content flex-start
+        height 48px
+    }
+    &__label{
+        height 100%
+        padding-left 8px
+        display flex
+        align-items: center
+        border none
+        cursor: pointer
+        background-color var(--grey-background-color)
+        &_default{
+            background-color var(--main-color)
+        }
+        &_opacity{
+            background-color rgba(#e6edee,0.5)
+           
+        }
+    }
+    &__icon{
+        width 30px
+        height 30px
+    }
+    &__name-nav{
+        color: var(--main-text-color)
+        height 48px
+        line-height 48px
+        font-size: 16px
+    }
+    &__article{
+        width 684px
+        margin 26px 0 40px 0
+    }
+    &__introduce{
+        font-style 14px
+        line-height 24px
+        margin: 16px 0 16px 0
+    }
+    &__list{
+        list-style url('../components/icons/Rectangle.svg')
+        list-style-position outside
+        margin 0
+        padding 0
+    }
+    &__item{
+        color: #626262;
+        font-style 14px
+        line-height 24px
+        margin-left: 32px
+        padding-bottom 24px
+        &:last-of-type{
+            padding-bottom 0    
+        }
+    }
+}
