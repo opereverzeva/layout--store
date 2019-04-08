@@ -1,0 +1,216 @@
+.sale-ok{
+    &__menu{
+        color var(--main-text-color)
+        font-size: 14px
+        line-height 34px
+        height 34px
+        width 100%
+    }
+    &__menu-list{
+        list-style none
+        display flex
+        margin 0
+        padding 0
+        height 16px
+        
+    }
+    &__menu-item{
+        padding: 0 4px
+        user-select: none
+        position relative
+    }
+    &__name{
+        display inline
+        cursor pointer
+        text-decoration none
+        color inherit
+        margin 0
+        padding 0
+    }
+    &__title-page{
+        margin 0
+        padding 6px 0 16px 0
+        height 32px
+        line-height 32px
+        cursor: auto
+        color: var(--price-color)
+    }
+    &__card{
+        width 100%
+        height 234px
+        display flex
+        flex-direction: column
+        justify-content: flex-start
+        margin-top 52px
+        align-items: center
+        color: var(--main-text-color)
+    }
+    &__ok{
+        width 60px
+        height 60px
+    }
+    &__head, &__ok {
+        margin 0
+        padding 0
+    }
+    &__description{
+        height 36px
+        width 173px
+        font-size: 13px
+        line-height 18px
+        margin-top 20px
+    }
+    &__button{
+        width 992px
+        height 48px
+        background-color var(--background-button-color)
+        color var(--main-color)
+        text-transform: uppercase
+        font-weight 700
+        cursor pointer
+        border: 0
+        margin-left 16px
+    }
+    &__link{
+        text-decoration none
+        color: inherit
+    }
+}
+.overlay__sale-ok{
+    background-color var(--price-color)
+    opacity 0.5
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100vh
+    z-index: 10
+}
+.modal-sale-ok{
+    background-color var(--main-color)
+    width: 336px
+    height: 368px
+    position: absolute
+    top 50%
+    left: 50%
+    margin-top: -184px
+    margin-left: -168px
+    z-index: 11
+    &__title{
+        height 40px
+        width 250px
+        font-size: 16px
+        line-height 20px
+        color: var(--main-text-color)
+        margin-left 16px
+        margin-top 22px
+    }
+    &__close{
+        position absolute
+        top 8px
+        right 8px
+        width 48px
+        height 48px
+        transform: rotate(-45deg)
+        color: var(--main-text-color)
+        text-align: center
+        line-height: 48px
+        font-size 36px
+        cursor pointer
+         
+    }
+    &__photo{
+        width 168px
+        height 96px
+        margin 20px 16px
+    }
+    &__details{
+        display flex
+        justify-content: space-between
+        padding: 0 16px
+    }
+    &__amount{
+        width 144px
+        height 66px
+        margin 0
+        padding 0
+    }
+    &__amount-title{
+        height 20px
+        font-size: 10px
+        line-height 20px
+        color: var(--main-text-color)
+        padding 0
+        margin 0
+    }
+    &__change{
+        width 144px
+        height 48px
+        margin 0
+        padding 0
+        color: var(--main-text-color)
+        display flex
+    }
+    &__change-button{
+        width 48px
+        height 48px
+        background-color var(--main-color)
+        border: 1px solid #D2D7E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        text-align: center
+        line-height 48px
+        font-size: 2em
+        cursor pointer
+    }
+    &__change-item{
+        width 48px
+        height 48px
+        text-align: center
+        line-height 48px
+        font-size: 16px
+    }
+    &__sum{
+        width 90px
+        height 50px
+        display flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        color: var(--no-active-button-color)
+    }
+    &__sum-title{
+        font-size: 10px
+        margin 0
+        padding 0
+    }
+    &__summary{
+        font-size: 16px
+        padding 0
+    }
+    &__delete{
+        display flex
+        justify-content: center
+    }
+    &__icons{
+        display inline-block
+        color: var(--price-color)
+        width 16px
+        height 16px
+        border-radius: 8px
+        background: var(--no-active-button-color)
+        text-align center
+        font-size: 10px
+        line-height: 14px
+        opacity 0.2
+        font-weight 900
+        cursor pointer
+    }
+    &__name-icons{
+        display inline
+        color: var(--no-active-button-color)
+        
+        font-size: 10px
+        line-height: 16px
+    }
+}

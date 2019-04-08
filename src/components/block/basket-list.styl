@@ -1,9 +1,11 @@
 .basket-list{
     position relative
+    margin: 0
+    padding: 0
+    margin-bottom: 16px
     &__total{
-        position absolute
-        top 0
-        right 16px
+        text-align right
+        padding-right 16px
         color: #626262;
         font-size: 11px
     }
@@ -12,10 +14,12 @@
         margin-top 36px
     }
     &__box{
-        height 100px
+        margin-top 8px
+        // height 100px
         width 568px
         border-top 1px solid var(--grey-background-color)
         color var(--main-text-color)
+        position relative
     }
     &__title{
         font-size: 13px
@@ -26,10 +30,81 @@
     &__details{
         position: absolute
         right 16px
-        top 0
-        width 104px
+        top 8px
+        width 110px
         font-size: 13px
         line-height 16px
         height 32px
+        font-weight 700
+    }
+    &__number{
+        display flex
+        justify-content: space-between
+
+    }
+    &__amout{
+        margin 0
+        padding 0
+    }
+    &__sum{
+        margin 0
+        padding 0
+    }
+    &__change{
+        color: var(--header-text-color)
+        border-bottom: 1px dashed var(--header-text-color);  
+        padding: 0 
+        margin 0
+        cursor pointer
+        height 15px
+        font-size: 10px
+        line-height: 16px
+    }
+    &__photo{
+        width 72px
+        height 48px
+        display inline
+    }
+    &__delete{
+        display inline
+        margin-left 14px
+    }
+    &__icons{
+        display inline-block
+        color: var(--price-color)
+        width 16px
+        height 16px
+        border-radius: 8px
+        background: var(--no-active-button-color)
+        text-align center
+        font-size: 10px
+        line-height: 14px
+        opacity 0.2
+        font-weight 900
+        cursor pointer
+    }
+    &__name-icons{
+        display inline
+        color: var(--no-active-button-color)
+        
+        font-size: 10px
+        line-height: 16px
+    }
+    &__submit, &__summary{
+        width 568px
+        height 48px
+        background-color var(--background-button-color)
+        color var(--main-color)
+        text-transform: uppercase
+        font-weight 700
+    }
+    &__submit{
+        margin 63px 0 0 0
+        cursor pointer
+        border: 0
+    }
+    &__go-to-ok{
+        text-decoration none
+        color: inherit
     }
 }
