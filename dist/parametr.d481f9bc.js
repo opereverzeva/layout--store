@@ -123,8 +123,16 @@ $(function () {
   $(".parametr__button").click(function (event) {
     event.preventDefault();
     event.stopPropagation();
-    $(this).toggleClass('parametr__button_open');
+    $(this).addClass('parametr__button_open');
+    $('.other-parametrs__view').addClass('other-parametrs__view_active');
     console.log($(this).hasClass('parametr__button_open'));
+  }); //закрытие списка 
+
+  $(".parametr__button_open").click(function () {
+    // event.preventDefault();
+    // event.stopPropagation();
+    $(this).removeClass('parametr__button_open');
+    $('.other-parametrs__view').removeClass('other-parametrs__view_active');
   });
 });
 },{}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {

@@ -1736,6 +1736,33 @@ input[type=checkbox]:checked + label::before {
 .other-parametrs__group {
   margin-top: 8px;
 }
+.other-parametrs__view {
+  background-color: var(--grey-background-color);
+  height: 257px;
+  width: 100vw;
+  display: none;
+  padding-left: 16px;
+}
+.other-parametrs__view_active {
+  display: flex;
+}
+.other-parametrs__view-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 135px;
+  font-size: 12px;
+  line-height: 24px;
+  color: var(--price-color);
+  float: left;
+}
+.other-parametrs__view-item {
+  text-decoration: none;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  height: 24px;
+}
 .card-add-goods {
   width: 178px;
   height: 176px;
