@@ -83,4 +83,12 @@ $(() => {
         $('.modal-window').removeClass('modal-window_active')
         $('.hidden').removeClass('hidden_active')
     });
+
+
+    //закрытие модальное окно товара .sale-ok
+    $(".overlay__sale-ok, .modal-sale-ok__close, .modal-sale-ok__button").click(function (event) {
+        $('.overlay__sale-ok').addClass('overlay__sale-ok_hidden')
+        $('.modal-sale-ok').addClass('modal-sale-ok_hidden')
+        $('.hidden').removeClass('hidden_active')
+    });
 })

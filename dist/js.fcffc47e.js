@@ -260,6 +260,12 @@ $(function () {
   $(".overlay__modal-add-basket, .modal-add-basket__close").click(function (event) {
     $('.modal-window').removeClass('modal-window_active');
     $('.hidden').removeClass('hidden_active');
+  }); //закрытие модальное окно товара .sale-ok
+
+  $(".overlay__sale-ok, .modal-sale-ok__close, .modal-sale-ok__button").click(function (event) {
+    $('.overlay__sale-ok').addClass('overlay__sale-ok_hidden');
+    $('.modal-sale-ok').addClass('modal-sale-ok_hidden');
+    $('.hidden').removeClass('hidden_active');
   });
 });
 },{"./Ticker":"../js/Ticker.js"}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -290,7 +296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40015" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

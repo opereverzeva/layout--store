@@ -1,0 +1,148 @@
+
+
+.modal-sale-ok{
+    background-color var(--main-color)
+    width: 336px
+    height: 368px
+    position: absolute
+    top 50%
+    left: 50%
+    margin-top: -184px
+    margin-left: -168px
+    z-index: 11
+    &_hidden{
+        display: none
+    }
+    &__title{
+        height 40px
+        width 250px
+        font-size: 16px
+        line-height 20px
+        color: var(--main-text-color)
+        margin 22px 0 0 16px
+        padding 0
+    }
+    &__close{
+        position absolute
+        top 8px
+        right 8px
+        width 48px
+        height 48px
+        transform: rotate(-45deg)
+        color: var(--main-text-color)
+        text-align: center
+        line-height: 48px
+        font-size 36px
+        cursor pointer
+    }
+    &__photo{
+        width 168px
+        height 96px
+        margin 20px 16px
+        padding 0
+    }
+    &__details{
+        display flex
+        justify-content: space-between
+        padding: 0 16px
+    }
+    &__amount{
+        width 144px
+        height 66px
+        margin 0
+        padding 0
+    }
+    &__amount-title{
+        height 20px
+        font-size: 10px
+        line-height 20px
+        color: var(--main-text-color)
+        padding 0
+        margin 0
+    }
+    &__change{
+        width 144px
+        height 48px
+        margin 0
+        padding 0
+        color: var(--main-text-color)
+        display flex
+    }
+    &__change-button{
+        width 48px
+        height 48px
+        background-color var(--main-color)
+        border: 1px solid #D2D7E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        text-align: center
+        line-height 48px
+        font-size: 2em
+        cursor pointer
+    }
+    &__change-item{
+        width 48px
+        height 48px
+        text-align: center
+        line-height 48px
+        font-size: 16px
+    }
+    &__sum{
+        width 90px
+        height 60px
+        display flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        color: var(--no-active-button-color)
+    }
+    &__sum-title{
+        font-size: 10px
+        margin 0
+        padding 0
+    }
+    &__summary{
+        font-size: 16px
+        padding 0
+    }
+    &__delete{
+        display flex
+        justify-content: center
+        padding 0
+        margin 30px 0 20px 0
+    }
+    &__icons{
+        display inline-block
+        color: var(--price-color)
+        width 12px
+        height 12px
+        border-radius: 8px
+        background: var(--no-active-button-color)
+        text-align center
+        font-size: 14px
+        line-height: 10px
+        opacity 0.2
+        font-weight bolder
+        cursor pointer
+    }
+    &__name-icons{
+        display inline
+        color: var(--no-active-button-color)
+        font-size: 10px
+        line-height: 16px
+        padding-left 8px
+    }
+    &__button{
+        height 48px
+        width 100%
+        background-color var(--background-button-color)
+        color: var(--main-color)
+        text-transform: uppercase
+        cursor pointer
+        border none
+    }
+    &__link{
+        text-decoration none
+        color inherit
+    }
+}
