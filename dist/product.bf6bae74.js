@@ -117,15 +117,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../components/block/menu.js":[function(require,module,exports) {
-var _this = this;
-
+})({"../components/elements/product.js":[function(require,module,exports) {
 $(function () {
-  $(".menu__item").click(function () {
-    // event.stopPropagation()
-    console.log('click');
-    $(_this).toggleClass('menu__item_active');
-    $(_this).next(".menu__open-section").toggleClass("menu__open-section_active"); // return false
+  //открытие списка 
+  $(".product__like").click(function (event) {
+    // event.preventDefault();
+    // event.stopPropagation();
+    $(this).toggleClass('product__like_active');
   });
 });
 },{}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -331,5 +329,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../components/block/menu.js"], null)
-//# sourceMappingURL=/menu.b23da4b8.js.map
+},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../components/elements/product.js"], null)
+//# sourceMappingURL=/product.bf6bae74.js.map
