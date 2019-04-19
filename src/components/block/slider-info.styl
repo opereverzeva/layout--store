@@ -48,7 +48,6 @@
         margin-left -40px
         display flex
         justify-content: space-between
-
     }
     &__switch-position{
         width: 6px
@@ -58,7 +57,7 @@
         border: 1px solid rgba(29, 53, 102, 0.4);
         cursor pointer
         transition: 0.3s
-        &_active{
+        &_active, &:active{
             background-color var(--main-text-color)
         }
         &_hidden{

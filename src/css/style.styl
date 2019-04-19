@@ -20,6 +20,7 @@
 @import '../components/block/izbrannye-tovary.styl';
 @import '../components/block/change-and-return.styl';
 @import '../components/block/pay-and-delivery.styl';
+@import '../components/elements/marker-navbar.styl';
 
 html, body{
     height 100%
@@ -345,6 +346,7 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         font-size: 16px;
         line-height: 24px;
         color: var(--price-color)
+        font-weight: 600
     }
     &__like{
         position absolute
@@ -354,7 +356,7 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         bottom: 0
         background url('../components/icons/not-like.svg') no-repeat center 
         cursor: pointer
-        z-index: 2
+        
         &_active{
             background url('../components/icons/heart-added.svg') no-repeat center 
         }
@@ -459,7 +461,6 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
     &__description{
         margin 18px 0 0 16px
         line-height: 32px;
-        z-index: 2
     }
     &__title{
         font-size: 22px;
@@ -510,7 +511,6 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         margin-left 16px
     }
 }
-
 
 //акции promotion.html
 .promotion{
