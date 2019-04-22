@@ -117,79 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../js/Ticker.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var Ticker =
-/*#__PURE__*/
-function () {
-  function Ticker(fun) {
-    var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
-
-    _classCallCheck(this, Ticker);
-
-    this.fun = fun;
-    this.timeout = timeout;
-    this.id;
-    this.isStopped = true;
-  }
-
-  _createClass(Ticker, [{
-    key: "__time",
-    value: function __time() {
-      var _this = this;
-
-      if (this.isStopped) {
-        return;
-      }
-
-      this.id = setTimeout(function () {
-        _this.fun();
-
-        _this.__time();
-      }, this.timeout);
-    }
-  }, {
-    key: "start",
-    value: function start() {
-      if (this.isStopped === false) {
-        return;
-      }
-
-      this.isStopped = false;
-
-      this.__time();
-    }
-  }, {
-    key: "stop",
-    value: function stop() {
-      this.isStopped = true;
-      clearTimeout(this.id);
-    }
-  }]);
-
-  return Ticker;
-}();
-
-var _default = function _default(fun, timeout) {
-  var ticker = new Ticker(fun, timeout);
-  ticker.start();
-  return ticker;
-};
-
-exports.default = _default;
-},{}],"../js/owl.carousel.min.js":[function(require,module,exports) {
+})({"../js/owl.carousel.min.js":[function(require,module,exports) {
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 /**
@@ -1350,88 +1278,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   };
   j.csstransitions() && (a.support.transition = new String(f("transition")), a.support.transition.end = i.transition.end[a.support.transition]), j.cssanimations() && (a.support.animation = new String(f("animation")), a.support.animation.end = i.animation.end[a.support.animation]), j.csstransforms() && (a.support.transform = new String(f("transform")), a.support.transform3d = j.csstransforms3d());
 }(window.Zepto || window.jQuery, window, document);
-},{}],"../js/index.js":[function(require,module,exports) {
-"use strict";
-
-var _Ticker = _interopRequireDefault(require("./Ticker"));
-
-var _owlCarouselMin = _interopRequireDefault(require("./owl.carousel.min.js"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-$(function () {
-  //открытие модального окна на стартовой позиции
-  $('.panel-filter-header__filter').click(function (event) {
-    event.preventDefault();
-    $('.w-hidden').removeClass('w-hidden');
-    $('.type-window, .form-window, .price-window').addClass('w-hidden');
-    $('.modal-window').addClass('modal-window_active');
-    $('.hidden').addClass('hidden_active');
-  }); //закрытие модального окна
-
-  $(".overlay, .modal-filter__close").click(function (event) {
-    $('.modal-window').removeClass('modal-window_active');
-    $('.hidden').removeClass('hidden_active');
-  }); //переход в фильтр по типу
-
-  $(".modal-filter__link").click(function (event) {
-    $('.start-window').addClass('w-hidden');
-    $('.type-window').removeClass('w-hidden');
-  }); //возврат к общему окну фильтра
-
-  $(".modal-filter__back").click(function (event) {
-    $('.type-window').addClass('w-hidden');
-    $('.start-window').removeClass('w-hidden');
-  }); //переход в фильтр по форме
-
-  $("#form-filter").click(function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    $('.start-window').addClass('w-hidden');
-    $('.form-window').removeClass('w-hidden');
-  }); //возврат к общему окну фильтра
-
-  $(".modal-filter__back").click(function (event) {
-    $('.form-window').addClass('w-hidden');
-    $('.start-window').removeClass('w-hidden');
-  }); //переход в фильтр по цене
-
-  $("#price-filter").click(function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    $('.start-window').addClass('w-hidden');
-    $('.price-window').removeClass('w-hidden');
-  }); //возврат к общему окну фильтра
-
-  $(".modal-filter__back").click(function (event) {
-    $('.price-window').addClass('w-hidden');
-    $('.start-window').removeClass('w-hidden');
-  }); //переключение позиции парогенератора .modal-filter__marker
-
-  $(".modal-filter__turn").click(function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    $('.modal-filter__marker').toggleClass('modal-filter__marker_on');
-  }); //добавление товара в корзину
-
-  $('.main-parametr-goods__button, .card-add-goods__add').click(function (event) {
-    // event.preventDefault();
-    $('.modal-window').addClass('modal-window_active');
-    $('.hidden').addClass('hidden_active');
-  }); //закрытие модального окна
-
-  $(".overlay__modal-add-basket, .modal-add-basket__close").click(function (event) {
-    $('.modal-window').removeClass('modal-window_active');
-    $('.hidden').removeClass('hidden_active');
-  }); //закрытие модальное окно товара .sale-ok
-
-  $(".overlay__sale-ok, .modal-sale-ok__close, .modal-sale-ok__button").click(function (event) {
-    $('.overlay__sale-ok').addClass('overlay__sale-ok_hidden');
-    $('.modal-sale-ok').addClass('modal-sale-ok_hidden');
-    $('.hidden').removeClass('hidden_active');
-  });
-});
-},{"./Ticker":"../js/Ticker.js","./owl.carousel.min.js":"../js/owl.carousel.min.js"}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1634,5 +1481,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../js/index.js"], null)
-//# sourceMappingURL=/js.fcffc47e.js.map
+},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../js/owl.carousel.min.js"], null)
+//# sourceMappingURL=/owl.carousel.min.ea2cb3a7.js.map

@@ -3,17 +3,14 @@
     background-color var(--main-color)
     overflow hidden
     position: relative
-    margin: 0
-    padding: 0
+    width: 100%
     &__list{
-        list-style none 
-        display flex
-        overflow: hidden
-        width: calc(232px*5+72px*5)
+        padding-left: 24px
+        // width: calc(232px*5+72px*5)
     }
     &__slide{
-        width: 304px
-        padding: 0 48px 0 24px
+        // width: 304px
+        padding: 20px 48px 10px 24px
         overflow hidden
         cursor pointer
         display flex
@@ -21,7 +18,7 @@
         height 100%
     }
     &__slide-img{
-        width: 72px
+        width: 72px !important
         height 72px
         color: #14B7FF;
         margin 0
@@ -33,7 +30,7 @@
         display flex
         align-items: center
         justify-content flex-start
-        min-width 144px
+        width 144px
         padding-left 16px
         color: var(--main-text-color)
         font-size: 20px

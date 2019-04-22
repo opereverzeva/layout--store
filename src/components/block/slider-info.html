@@ -1,42 +1,85 @@
 <section class="slider-info container">
-    <ul class="slider-info__list">
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/calendar-for-slider.svg" title="Работаем без выходных"
-                alt="Работаем без выходных" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем без выходных</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/auto-for-slider.svg" title="Быстрая доставка" alt="Быстрая доставка"
-                class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Быстрая доставка</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/guarantee-for-slider.svg" title="Гарант низкой цены" alt="Гарант низкой цены"
-                class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Гарант низкой цены</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/men-for-slider.svg" title="Работаем быстро" alt="Работаем быстро"
-                class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем быстро</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/calendar-for-slider.svg" title="Работаем без выходных"
-                alt="Работаем без выходных" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем без выходных</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="../components/icons/full-watch-for-slider.svg" title="Сервис" alt="Сервис"
-                class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Сервис</div>
-        </li>
+    <!-- <ul class="slider-info__list"> -->
 
-    </ul>
-    <div class="slider-info__switch">
+    <div class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+            <div class="owl-stage slider-info__list">
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/calendar-for-slider.svg" title="Работаем без выходных"
+                            alt="Работаем без выходных" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем без выходных</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/auto-for-slider.svg" title="Быстрая доставка"
+                            alt="Быстрая доставка" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Быстрая доставка</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/guarantee-for-slider.svg" title="Гарант низкой цены"
+                            alt="Гарант низкой цены" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Гарантия низкой цены</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/men-for-slider.svg" title="Работаем быстро" alt="Работаем быстро"
+                            class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем быстро</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/calendar-for-slider.svg" title="Работаем без выходных"
+                            alt="Работаем без выходных" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем без выходных</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="../components/icons/full-watch-for-slider.svg" title="Сервис" alt="Сервис"
+                            class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Сервис</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="slider-info__switch">
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position slider-info__switch-position_active" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
-    </div>
+    </div> -->
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true, //Зацикливаем слайдер
+            center: true, // Отцентровать элементы 
+            margin: 24, //Отступ от элемента справа в 50px
+            nav: false, //Включение навигации
+            rewind: true,
+            autoplay: true, //Автозапуск слайдера
+            smartSpeed: 1000, //Время движения слайда
+            autoplayTimeout: 2000, //Время смены слайда
+            autoplayHoverPause: true,
+            responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                375: {
+                    items: 1
+                },
+                768: {
+                    items: 2
+                },
+                1024: {
+                    items: 4
+                }
+            }
+        });
+    </script>
 </section>

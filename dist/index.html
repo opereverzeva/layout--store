@@ -8,6 +8,7 @@
     <link href="http://allfont.ru/allfont.css?fonts=agpresquire" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/style.0cb376f7.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/owl.carousel.min.ea2cb3a7.js"></script>
     <title>Story</title>
 <script src="/style.0cb376f7.js"></script></head>
 
@@ -1990,40 +1991,89 @@
     <script src="/menu.b23da4b8.js"></script>
 </nav>
         <section class="slider-info container">
-    <ul class="slider-info__list">
-        <li class="slider-info__slide" role="img">
-            <img src="/calendar-for-slider.43122838.svg" title="Работаем без выходных" alt="Работаем без выходных" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем без выходных</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="/auto-for-slider.340ee7f3.svg" title="Быстрая доставка" alt="Быстрая доставка" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Быстрая доставка</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="/guarantee-for-slider.0b2a556e.svg" title="Гарант низкой цены" alt="Гарант низкой цены" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Гарант низкой цены</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="/men-for-slider.3e62ffca.svg" title="Работаем быстро" alt="Работаем быстро" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем быстро</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="/calendar-for-slider.43122838.svg" title="Работаем без выходных" alt="Работаем без выходных" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Работаем без выходных</div>
-        </li>
-        <li class="slider-info__slide" role="img">
-            <img src="/full-watch-for-slider.49a07581.svg" title="Сервис" alt="Сервис" class="slider-info__slide-img">
-            <div class="slider-info__slide-name">Сервис</div>
-        </li>
+    <!-- <ul class="slider-info__list"> -->
 
-    </ul>
-    <div class="slider-info__switch">
+    <div class="owl-carousel owl-theme owl-loaded">
+        <div class="owl-stage-outer">
+            <div class="owl-stage slider-info__list">
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/calendar-for-slider.43122838.svg" title="Работаем без выходных" alt="Работаем без выходных" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем без выходных</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/auto-for-slider.340ee7f3.svg" title="Быстрая доставка" alt="Быстрая доставка" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Быстрая доставка</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/guarantee-for-slider.0b2a556e.svg" title="Гарант низкой цены" alt="Гарант низкой цены" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Гарантия низкой цены</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/men-for-slider.3e62ffca.svg" title="Работаем быстро" alt="Работаем быстро" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем быстро</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/calendar-for-slider.43122838.svg" title="Работаем без выходных" alt="Работаем без выходных" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Работаем без выходных</div>
+                    </div>
+                </div>
+                <div class="owl-item">
+                    <div class="slider-info__slide">
+                        <img src="/full-watch-for-slider.49a07581.svg" title="Сервис" alt="Сервис" class="slider-info__slide-img">
+                        <div class="slider-info__slide-name">Сервис</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--<div class="slider-info__switch">
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position slider-info__switch-position_active" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
         <div class="slider-info__switch-position" role="button"></div>
-    </div>
+    </div> -->
+    <script>$('.owl-carousel').owlCarousel({
+  loop: true,
+  //Зацикливаем слайдер
+  center: true,
+  // Отцентровать элементы 
+  margin: 24,
+  //Отступ от элемента справа в 50px
+  nav: false,
+  //Включение навигации
+  rewind: true,
+  autoplay: true,
+  //Автозапуск слайдера
+  smartSpeed: 1000,
+  //Время движения слайда
+  autoplayTimeout: 2000,
+  //Время смены слайда
+  autoplayHoverPause: true,
+  responsive: {
+    //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+    375: {
+      items: 1
+    },
+    768: {
+      items: 2
+    },
+    1024: {
+      items: 4
+    }
+  }
+});</script>
 </section>
         <section class="promotion">
     <div class="container">
@@ -2240,48 +2290,142 @@
         <button class="slider-brend__nav">
             <img src="/button-pre-for-slider.97562edd.svg" alt="" class="slider-brend__prev">
         </button>
-        <ul class="slider-brend__list">
+
+        <div class="owl-carousel owl-theme owl-loaded slider-brend__list">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend1-for-slider.d12832b1.png" title="Brend1" alt="Brend1" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend2-for-slider.87859e6c.png" title="Brend2" alt="Brend2" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend3-for-slider.680460d2.png" title="Brend3" alt="Brend3" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend4-for-slider.c4e6281f.png" title="Brend4" alt="Brend4" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend5-for-slider.8e3c5bfa.png" title="Brend5" alt="Brend5" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend6-for-slider.3c892d20.png" title="Brend6" alt="Brend6" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                    <div class="owl-item">
+                        <a href="#" class="slider-brend__brend-link">
+                            <img src="/brend7-for-slider.c7938883.png" title="Brend7" alt="Brend7" class="slider-brend__brend-img">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <ul class="slider-brend__list">
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend1-for-slider.d12832b1.png" title="Brend1" alt="Brend1" class="slider-brend__brend-img">
+                    <img src="../image/brend1-for-slider.png" title="Brend1" alt="Brend1"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend2-for-slider.87859e6c.png" title="Brend2" alt="Brend2" class="slider-brend__brend-img">
+                    <img src="../image/brend2-for-slider.png" title="Brend2" alt="Brend2"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend3-for-slider.680460d2.png" title="Brend3" alt="Brend3" class="slider-brend__brend-img">
+                    <img src="../image/brend3-for-slider.png" title="Brend3" alt="Brend3"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend4-for-slider.c4e6281f.png" title="Brend4" alt="Brend4" class="slider-brend__brend-img">
+                    <img src="../image/brend4-for-slider.png" title="Brend4" alt="Brend4"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend5-for-slider.8e3c5bfa.png" title="Brend5" alt="Brend5" class="slider-brend__brend-img">
+                    <img src="../image/brend5-for-slider.png" title="Brend5" alt="Brend5"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend6-for-slider.3c892d20.png" title="Brend6" alt="Brend6" class="slider-brend__brend-img">
+                    <img src="../image/brend6-for-slider.png" title="Brend6" alt="Brend6"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
             <li class="slider-brend__slide">
                 <a href="#" class="slider-brend__brend-link">
-                    <img src="/brend7-for-slider.c7938883.png" title="Brend7" alt="Brend7" class="slider-brend__brend-img">
+                    <img src="../image/brend7-for-slider.png" title="Brend7" alt="Brend7"
+                        class="slider-brend__brend-img">
                 </a>
             </li>
-        </ul>
+        </ul>-->
         <button class="slider-brend__nav">
             <img src="/button-pre-for-slider.97562edd.svg" alt="next" class="slider-brend__next">
         </button>
-    </div>
-</section>
+        <!-- </div> -->
+        <script>$('.owl-carousel').owlCarousel({
+  loop: true,
+  //Зацикливаем слайдер
+  center: true,
+  // Отцентровать элементы 
+  margin: 24,
+  //Отступ от элемента справа в 50px
+  nav: false,
+  //Включение навигации
+  // navText: ["<img src='./components/icons/button-pre-for-slider.svg'>",
+  //     "<img src='./components/icons/button-pre-for-slider.svg'>"
+  // ],
+  dots: false,
+  rewind: true,
+  autoplay: true,
+  //Автозапуск слайдера
+  smartSpeed: 1000,
+  //Время движения слайда
+  autoplayTimeout: 2000,
+  //Время смены слайда
+  autoplayHoverPause: true,
+  responsive: {
+    //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+    375: {
+      items: 1
+    },
+    768: {
+      items: 3
+    },
+    1024: {
+      items: 5
+    }
+  }
+}); //Делегируем события кнопок next prev по умолчанию нашим кнопкам, которые могут находится ыне контейнера слайдера
+
+var owl = $(".owl-carousel");
+owl.owlCarousel(); //$(".next") - находим нашу кнопку
+
+$(".slider-brend__next").click(function () {
+  owl.trigger("next.owl.carousel");
+});
+$(".slider-brend__prev").click(function () {
+  owl.trigger("prev.owl.carousel");
+});</script>
+</div></section>
         <aside class="block container">
         </aside>
         <section class="contact container">

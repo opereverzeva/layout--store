@@ -1,4 +1,5 @@
 import createTicker from './Ticker'
+import owlCarousel from './owl.carousel.min.js'
 
 
 $(() => {
@@ -91,4 +92,7 @@ $(() => {
         $('.modal-sale-ok').addClass('modal-sale-ok_hidden')
         $('.hidden').removeClass('hidden_active')
     });
+
+
+
 })
