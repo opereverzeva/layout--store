@@ -651,40 +651,39 @@ template {
     top: 25px;
 }
 .menu__select {
-  display: none;
-}
-.menu__select_active {
   position: absolute;
-  top: 25px;
   left: 0;
-  width: 1024px;
+  display: block;
+  width: 100%;
   box-sizing: border-box;
   background-color: var(--main-color);
   box-shadow: 0px 4px 16px var --box-shadow-color;
   color: var(--main-text-color);
   min-height: 590px;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin: 26px 8px;
+  padding: 26px 12px;
+  margin: 0;
   cursor: auto;
 }
-@media (max-width: 1023px) and (max-device-width: 1023px) {
-  .menu__select {
-    width: 768px;
-    top: 40px;
-  }
+.menu__select::before {
+  clear: both;
+}
+.menu__select::after {
+  clear: both;
 }
 .menu__box {
   color: var(--main-text-color);
   font-family: AGPresquire Arial, Helvetica, sans-serif;
   font-size: 12px;
-  line-height: 43px;
+  line-height: 12px;
   padding: 0px 12px;
   width: 136px;
+  text-align: left;
 }
 @media (max-width: 1023px) and (max-device-width: 1023px) {
   .menu__box {
@@ -701,12 +700,22 @@ template {
   list-style: none;
   margin: 0;
   padding: 0;
+  line-height: 13px;
 }
 .menu__box-textarea {
-  height: 48px;
-  line-height: normal;
-  margin-top: 5px;
+  line-height: 13px;
+  text-align: left;
+  margin-bottom: 30px;
   cursor: pointer;
+}
+.menu__box-text {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: left;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 .menu {
   width: 100%;
@@ -750,7 +759,6 @@ template {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  position: relative;
   min-width: 102.3px;
   font-size: 14px;
   box-sizing: border-box;
@@ -780,12 +788,19 @@ template {
   }
 }
 .menu__title {
+  position: relative;
   cursor: pointer;
   line-height: 50px;
   text-align: center;
   display: block;
   text-decoration: none;
   color: inherit;
+}
+.menu__title::before {
+  clear: both;
+}
+.menu__title::after {
+  clear: both;
 }
 @media (max-width: 1023px) and (max-device-width: 1023px) {
   .menu__title {
@@ -800,6 +815,20 @@ template {
 .menu__item:hover,
 .menu__item_active {
   background-color: var(--main-color);
+}
+.menu__item:hover .menu__open-section,
+.menu__item_active .menu__open-section {
+  position: static;
+  display: block;
+  z-index: 2;
+}
+.menu__open-section {
+  display: none;
+}
+.menu__open-section_active {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 .overlay {
   background-color: var(--price-color);
@@ -1197,10 +1226,11 @@ template {
   background-color: var(--main-color);
   overflow: hidden;
   position: relative;
-  width: 100%;
+  margin-left: 16px;
 }
 .slider-info__list {
   padding-left: 24px;
+  width: 836px;
 }
 .slider-info__slide {
   padding: 20px 48px 10px 24px;
@@ -1575,7 +1605,7 @@ template {
   padding: 0;
 }
 .filter__content {
-  padding: 12px 16px 16px 16px;
+  padding: 12px 15px 16px 16px;
   background-color: var(--main-color);
   display: flex;
   flex-wrap: wrap;
@@ -3388,15 +3418,11 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
 }
-@media (min-device-width: 376px) {
-  .navbar__box {
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
-  }
-}
-@media (max-device-width: 375px) {
+@media (max-width: 374px) and (max-device-width: 374px) {
   .navbar__box {
     width: 48px;
     height: 48px;

@@ -8,7 +8,6 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 .menu{
     width 100%
     background-color: var(--grey-background-color)
-    // float left
     clear: both
     min-height: 50px
     position: relative
@@ -41,7 +40,7 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         height 50px
         cursor: pointer;
         user-select none
-        position: relative
+        // position: relative
         min-width: (1023px / 10)
         font-size 14px
         box-sizing: border-box
@@ -69,12 +68,17 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
 
     }
         &__title{
+            position relative
             cursor pointer
             line-height 50px
             text-align center
             display block
             text-decoration: none
             color: inherit
+            &::before{
+                clear: both}
+            &::after{
+                clear: both}
             @media desktop{
                 line-height 40px          
             }
@@ -83,17 +87,25 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
             }
          }
     
-    
         &__item:hover, &__item_active{
             background-color var(--main-color)
-            & ^[0]__select{
+        }
+        &__item:hover  &__open-section, &__item_active &__open-section{
+            position static
+            display: block
+            z-index: 2
 
-            } 
+        }
+        &__open-section{
+            display: none
+               
         }
 
-        // &__open-section_active{
-        //     display block
-        // }
+        &__open-section_active{
+            display: block
+            margin 0
+            padding 0
+        }
 
     }
 
