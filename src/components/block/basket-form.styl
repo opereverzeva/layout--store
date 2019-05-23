@@ -1,21 +1,35 @@
 .basket-form{
-    // padding 0 16px
     font-size: 15px
-    background-color: rgba(#E6EDEE, 0.2) 
+    background-color: rgba(#E6EDEE, 0.2)
+    margin: 0 16px
     &__name{
         color: var(--no-active-button-color)
         height 48px
         line-height 48px
+        width 100%
+        @media mobile {
+            &::after{
+                content: 'Заполните это поле'
+                color red    
+                // float: right 
+            }
+        }
     }
     &__input{
         background-color #F2F2F2;
         border-radius: 4px
         border none
-        width 384px
+        width: 97%
         height 44px
         line-height 44px
         color: var(--main-text-color)
         padding-left 8px
+        overflow: hidden
+        margin: 0
+        @media mobile{
+            padding: 0 
+            // width: 100%
+        }
     }
     &::placeholder{
         color var(--no-active-button-color)
@@ -30,12 +44,28 @@
         flex-wrap: wrap
     }
     &__radio{
-        margin 18px 8px
-        padding 0
-        width 20px
-        height 20px
+        display none
+    }
+    &__name-radio{
+        max-width: 270px
+        display flex
+        flex-direction: column
+    }
+    &__name-radio::before{
+        content ''
+        display inline-block
+        width 18px
+        height 18px
+        border-radius: 50%
+        border: 1px solid var(--main-text-color)
     }
     &__radio-description{
-        width 344px
+        padding 0
+        margin 0
+        // width 344px
+    }
+    &__radio-title{
+        padding 0
+        margin 0
     }
 }

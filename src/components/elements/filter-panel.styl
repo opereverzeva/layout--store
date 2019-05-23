@@ -1,4 +1,9 @@
 // панель фильтра
+desktop = "(max-width:1023px) and (max-device-width:1023px)"
+tablet = "(max-width:767px) and (max-device-width:767px)"
+mobile = "(max-width:375px) and (max-device-width:375px)"
+
+
 .filter-panel{
     background-color var(--main-color)
 }
@@ -82,6 +87,9 @@
     &__sort-title{
         float left
         color:  #626262;
+        @media desktop {
+            display none
+        }
     }
     &__nav-box{
         transition: 0.1s
@@ -98,7 +106,45 @@
         width 362px
         float left
         clear: both
+        @media desktop {
+            display none
+        }
     }
+    &__navbar-select{
+        display: none !important
+        @media desktop {
+            margin-right: 8px
+            display block !important
+        }
+    }
+
+    &__navbar-sel{
+            position relative
+            width 168px
+            height 48px
+            border: none 
+            background-color var(--grey-background-color)
+            border-radius: 4px
+            color: var(--price-color)
+            font-size: 15px
+            padding 0 14px
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        &__option{
+            background-color var(--grey-background-color)
+            opacity 0.4
+        }
+        &__arrow{
+            width 8px
+            height 14px
+            position: absolute
+            left 146px
+            top 17px
+            color: var(--main-text-color)
+        }
+
     &__checkbox{
         height  48px
         display flex

@@ -1,9 +1,9 @@
 @import '../components/elements/open-menu.styl';
 
 
-desktop = "(max-width:1023px) and (max-device-width:1023px)"
-tablet = "(max-width:767px) and (max-device-width:767px)"
-mobile = "(max-width:375px) and (max-device-width:375px)"
+// desktop = "(max-width:1023px) and (max-device-width:1023px)"
+// tablet = "(max-width:767px) and (max-device-width:767px)"
+// mobile = "(max-width:376px) and (max-device-width:376px)"
 
 .menu{
     width 100%
@@ -11,13 +11,16 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
     clear: both
     min-height: 50px
     position: relative
-    &:after {
+    &::after {
         content: "";
         display: table;
         clear: both;
     }
     @media desktop {
         min-height 80px
+    }
+    @media mobile {
+        height 332px
     }
     &__name{
         display: none
@@ -46,15 +49,15 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         box-sizing: border-box
         padding 0 8px
         line-height: 50px
-        @media desktop{
-            line-height 40px
-            height 40px
-            min-width 120px
-            margin-left 16px
-            padding-left: 8px
-            padding-right 8px
-        }
-        @media tablet {
+        // @media desktop{
+        //     line-height 40px
+        //     height 40px
+        //     min-width 120px
+        //     margin-left 16px
+        //     padding-left: 8px
+        //     padding-right 8px
+        // }
+        @media desktop {
             width: 120px
             text-align: start
             margin 0  0 0 40px
@@ -102,9 +105,10 @@ mobile = "(max-width:375px) and (max-device-width:375px)"
         }
 
         &__open-section_active{
-            display: block
+            display: inline-block
             margin 0
             padding 0
+            position relative
         }
 
     }

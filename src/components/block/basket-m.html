@@ -1,0 +1,22 @@
+<section class="basket-m">
+    <div class="container">
+        <nav class="basket-m__nav">
+            <extends src="./src/components/elements/basket-title.html">
+                <block name="header-name">Оформление заказа</block>
+            </extends>
+        </nav>
+        <div class="basket-m__content">
+            <div class="basket-m__form">
+                <extends src="./src/components/block/basket-form.html">
+                </extends>
+            </div>
+            <div class="basket-m__box">
+                <extends src="./src/components/elements/parametr.html">
+                    <block name="parametr-name">Список покупок</block>
+                </extends>
+                <extends src="./src/components/block/basket-list.html">
+                </extends>
+            </div>
+        </div>
+    </div>
+</section>
