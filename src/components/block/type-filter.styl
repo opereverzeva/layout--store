@@ -21,8 +21,9 @@
     &__input{
         display none
     }
-    &__input+&__name-input{
+    &__name-input{
         margin-left: 15px
+        cursor pointer
      }
     &__input[type="radio"]+&__name-input::before{
         content: ''
@@ -41,8 +42,11 @@
     }
     &__input[type="radio"]:checked + &__name-input::before{
         content:'•'
-        line-height:16px;
-        font-size 48px;
+        vertical-align middle
+        text-align center
+        display inline-block
+        line-height:15px;
+        font-size 40px;
         color: var(--main-text-color)
         background-color var(--main-color)
     }

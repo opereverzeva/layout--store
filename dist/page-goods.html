@@ -2184,7 +2184,7 @@
                 </p>
                 <div class="main-parametr-goods__repost-boxes">
                     <div class="main-parametr-goods__box">
-                        <a href="#" class="main-parametr-goods__link">
+                        <a href="https://www.facebook.com/" target="_blank" class="main-parametr-goods__link">
                             <button class="main-parametr-goods__facebook">
                                 <img src="/facebook-for-footer.c097708c.svg" role="img" title="Facebook" alt="Facebook" class="main-parametr-goods__icon">
                             </button>
@@ -2192,14 +2192,14 @@
 
                     </div>
                     <div class="main-parametr-goods__box">
-                        <a href="#" class="main-parametr-goods__link">
+                        <a href="https://vk.com" target="_blank" class="main-parametr-goods__link">
                             <button class="main-parametr-goods__vk">
                                 <img src="/vk-for-footer.a5d70747.svg" role="img" title="VK" alt="VK" class="main-parametr-goods__icon">
                             </button>
                         </a>
                     </div>
                     <div class="main-parametr-goods__box">
-                        <a href="#" class="main-parametr-goods__link">
+                        <a href="mailto:exemple@google-exemple.com?subject=Заказ" target="_blank" class="main-parametr-goods__link">
                             <button class="main-parametr-goods__google">
                                 <img src="/google-for-footer.6b734307.svg" role="img" title="Google" alt="Google" class="main-parametr-goods__icon">
                             </button>
@@ -2209,11 +2209,11 @@
             </div>
             <div class="main-parametr-goods__amount">
                 <p class="main-parametr-goods__amount-title">Количество</p>
-                <div class="main-parametr-goods__change">
-                    <button class="main-parametr-goods__change-button main-parametr-goods__change-button_minus">-</button>
-                    <div class="main-parametr-goods__change-item">7</div>
-                    <button class="main-parametr-goods__change-button main-parametr-goods__change-button__plus">+</button>
-                </div>
+                <form class="main-parametr-goods__change">
+                    <input id="minus" value="-" type="text" class="main-parametr-goods__change-button main-parametr-goods__change-button_minus">
+                    <output class="main-parametr-goods__change-item" name="result">7</output>
+                    <input id="plus" value="+" type="button" class="main-parametr-goods__change-button main-parametr-goods__change-button__plus">
+                </form>
             </div>
             <div class="main-parametr-goods__info-about-cost">
                 <h3 class="main-parametr-goods__price">260 190 P</h3>
@@ -2242,6 +2242,7 @@
             </div>
 
         </div>
+
     </div>
 </section>
         <section class="other-parametrs">
@@ -2267,34 +2268,37 @@
 <script src="/parametr.d481f9bc.js"></script>
             <div class="other-parametrs__view">
                 <div class="container">
-                    <ul class="other-parametrs__view-list">
-                        <li class="other-parametrs__view-item">Бренд</li>
-                        <li class="other-parametrs__view-item">Артикул</li>
-                        <li class="other-parametrs__view-item">Коллекция</li>
-                        <li class="other-parametrs__view-item">Назначение</li>
-                        <li class="other-parametrs__view-item">Управление</li>
-                        <li class="other-parametrs__view-item">Механизм</li>
-                        <li class="other-parametrs__view-item">Материал</li>
-                        <li class="other-parametrs__view-item">Донный клапан</li>
-                        <li class="other-parametrs__view-item">Гарантия</li>
-                        <li class="other-parametrs__view-item">Страна-производитель</li>
-                    </ul>
-                    <ul class="other-parametrs__view-list">
-                        <li class="other-parametrs__view-item">Ravak</li>
-                        <li class="other-parametrs__view-item">X070063</li>
-                        <li class="other-parametrs__view-item">10&ordm;</li>
-                        <li class="other-parametrs__view-item">для раковины</li>
-                        <li class="other-parametrs__view-item">рычажное</li>
-                        <li class="other-parametrs__view-item">керамический</li>
-                        <li class="other-parametrs__view-item">латунь</li>
-                        <li class="other-parametrs__view-item">есть</li>
-                        <li class="other-parametrs__view-item">5 лет</li>
-                        <li class="other-parametrs__view-item">Чехия</li>
-                    </ul>
+                    <div class="other-parametrs__table">
+                        <ul class="other-parametrs__view-list">
+                            <li class="other-parametrs__view-item">Бренд</li>
+                            <li class="other-parametrs__view-item">Артикул</li>
+                            <li class="other-parametrs__view-item">Коллекция</li>
+                            <li class="other-parametrs__view-item">Назначение</li>
+                            <li class="other-parametrs__view-item">Управление</li>
+                            <li class="other-parametrs__view-item">Механизм</li>
+                            <li class="other-parametrs__view-item">Материал</li>
+                            <li class="other-parametrs__view-item">Донный клапан</li>
+                            <li class="other-parametrs__view-item">Гарантия</li>
+                            <li class="other-parametrs__view-item">Страна-производитель</li>
+                        </ul>
+                        <ul class="other-parametrs__view-list">
+                            <li class="other-parametrs__view-item">Ravak</li>
+                            <li class="other-parametrs__view-item">X070063</li>
+                            <li class="other-parametrs__view-item">10&ordm;</li>
+                            <li class="other-parametrs__view-item">для раковины</li>
+                            <li class="other-parametrs__view-item">рычажное</li>
+                            <li class="other-parametrs__view-item">керамический</li>
+                            <li class="other-parametrs__view-item">латунь</li>
+                            <li class="other-parametrs__view-item">есть</li>
+                            <li class="other-parametrs__view-item">5 лет</li>
+                            <li class="other-parametrs__view-item">Чехия</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="parametr">
+        <div class="other-parametrs__box">
+            <div class="parametr">
     <div class="container">
         <div class="parametr__content">
             <div class="parametr__date">
@@ -2302,7 +2306,7 @@
                     <block name="parametr-name">Отзывы</block>
                 </div>
                 <div class="parametr__amount">
-                    <block name="parametr-amount">12</block>
+                    <block name="parametr-amount">10</block>
                 </div>
             </div>
             <button class="parametr__button">
@@ -2312,6 +2316,73 @@
     </div>
 </div>
 <script src="/parametr.d481f9bc.js"></script>
+            <div class="other-parametrs__view">
+                <div class="container">
+                    <ol class="other-parametrs__list-otzyv">
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum eius nesciunt ducimus
+                            et ea
+                            quo odio. Voluptatum deleniti, aperiam debitis, magnam, officiis quod voluptate eligendi
+                            autem
+                            temporibus consectetur eveniet perferendis.</li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum commodi dignissimos cum odio
+                            velit
+                            a illum ab. Dolorum ipsam, modi optio inventore, quibusdam perferendis cum esse deleniti
+                            ipsa
+                            itaque nisi.</li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus cum, delectus vel voluptates
+                            libero magni quis officia numquam soluta consequuntur in deleniti vero dolorem eius itaque
+                            explicabo quidem. Quam, dolor.
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit sit minus, sunt vitae qui
+                            maxime
+                            cumque. At, cumque! Incidunt dolore possimus ab voluptates vitae a ut et, saepe adipisci
+                            necessitatibus?
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur labore recusandae
+                            reprehenderit natus dicta quam quod nobis ea rerum unde neque vero minus, similique
+                            cupiditate
+                            quis fugit eveniet. Voluptates, eaque?
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi excepturi provident expedita
+                            voluptate. Facere, sit neque. Ut minus nobis animi quo, velit labore, obcaecati ducimus
+                            expedita
+                            ea a, sit nulla!
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati tempora corrupti culpa
+                            omnis
+                            itaque. Facere cupiditate laudantium inventore, laborum voluptate voluptatum quas quae enim
+                            animi, nam perspiciatis, quo odit deserunt?
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum impedit consequuntur
+                            inventore ad blanditiis. Ducimus tenetur dignissimos facere perspiciatis itaque incidunt
+                            provident eum neque nobis, rem distinctio reprehenderit doloribus?
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi illum explicabo laborum.
+                            Necessitatibus quia ea, dolor, voluptas esse doloribus consequuntur eum cupiditate unde
+                            ipsum
+                            cum voluptatibus pariatur culpa in voluptatum.
+                        </li>
+                        <li class="other-parametrs__item-otzyv">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam totam eaque quis aut
+                            reiciendis
+                            praesentium exercitationem quibusdam officiis? Tenetur labore vero soluta mollitia
+                            voluptatibus
+                            harum illum. Adipisci omnis eveniet cupiditate!
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
     </div>
     <div class="other-parametrs__group">
         <div class="other-parametrs__box">
@@ -2333,7 +2404,7 @@
     </div>
 </div>
 <script src="/parametr.d481f9bc.js"></script>
-            <div class="other-parametrs__view">
+            <div class="other-parametrs__view other-parametrs__view_white">
                 <div class="container">
                     <article class="other-parametrs__text">
                         <p class="other-parametrs__pharagraph">
@@ -2377,7 +2448,8 @@
                 </div>
             </div>
         </div>
-        <div class="parametr">
+        <div class="other-parametrs__box">
+            <div class="parametr">
     <div class="container">
         <div class="parametr__content">
             <div class="parametr__date">
@@ -2395,6 +2467,85 @@
     </div>
 </div>
 <script src="/parametr.d481f9bc.js"></script>
+
+            <div class="other-parametrs__view">
+                <article class="other-parametrs__article" role="article">
+                    <h2 class="page-company__title-page page-company__title-page_article">
+                        Условия обмена и возврата товара надлежащего качества, приобретенного в интернет-магазине
+                    </h2>
+                    <ul class="page-company__list">
+                        <li class="page-company__item">
+                            товар не должен иметь следов эксплуатации, должны быть сохранены его упаковка, товарный вид,
+                            потребительские свойства, пломбы, фабричные ярлыки, а также все полученные от продавца
+                            документы
+                            (чеки, гарантийный талон, инструкция по эксплуатации)
+                        </li>
+                        <li class="page-company__item">
+                            если к товару был приложен подарок, он должен быть передан вместе с товаром, при этом
+                            подарок
+                            также не должен иметь следов эксплуатации, должен быть сохранен его товарный вид,
+                            потребительские свойства, пломбы и фабричная (родная) упаковка
+                        </li>
+                        <li class="page-company__item">
+                            обменять приобретенный товар надлежащего качества Вы можете на аналогичный товар той же
+                            стоимости или на другую модель, доплатив магазину разницу в цене
+                        </li>
+                        <li class="page-company__item">
+                            в случае обмена или возврата товара надлежащего качества, приобретенного в
+                            интернет-магазине*,
+                            покупатель оплачивает транспортные услуги (стоимость услуги уточняйте у
+                            продавца-консультанта
+                            компании «АкваСити» в своем регионе)
+                        </li>
+                    </ul>
+                    <p class="page-company__introduce">
+                        Обмен или возврат товара надлежащего качества, приобретенного в розничных магазинах
+                        осуществляется в
+                        соответствии с Законом РФ «О защите прав потребителей» по усмотрению администрации магазина.
+                        Более
+                        подробную информацию Вы можете получить у администрации магазина.
+                    </p>
+                </article>
+                <article class="other-parametrs__article" role="article">
+                    <h2 class="page-company__title-page page-company__title-page_article">
+                        Условия обмена и возврата товара ненадлежащего качества
+                    </h2>
+                    <ul class="page-company__list">
+                        <li class="page-company__item">
+                            замена или возврат товара с выявленным в процессе эксплуатации скрытым производственными
+                            дефектом (существенным недостатком** ) производится на основаниях и в сроки, установленные
+                            Законом РФ «О защите прав потребителей»
+                        </li>
+                        <li class="page-company__item">
+                            в случае возникновения проблем с товаром, во-первых, убедитесь, что Вы полностью
+                            ознакомились с
+                            инструкцией по эксплуатации товара. Обычно в конце инструкции есть раздел, описывающий
+                            типичные
+                            проблемы и пути их решения собственными силами
+                        </li>
+                        <li class="page-company__item">
+                            для обмена товара ненадлежащего качества необходимо наличие заключения авторизованного
+                            сервисного центра (номера телефонов и адрес указываются в гарантийном талоне). На основании
+                            данного заключения по Вашему требованию мы обменяем этот товар на аналогичный, либо вернем
+                            уплаченные за него деньги
+                        </li>
+                        <li class="page-company__item">
+                            в случае если в результате экспертизы товара установлено, что его недостатки возникли по
+                            вине
+                            Покупателя, закон предусматривает обязанность Покупателя возместить расходы, связанные с
+                            проведением экспертизы
+                        </li>
+                    </ul>
+                    <p class="page-company__introduce">
+                        Если при рассмотрении Вашего требования о возврате товара будет установлено, что товар был в
+                        эксплуатации, имеет дефекты (трещины, царапины, сколы, механические повреждения за исключением
+                        скрытых производственных дефектов), находится в неполной комплектации или не в заводской
+                        упаковке,
+                        то обмен/возврат произведен не будет.
+                    </p>
+                </article>
+            </div>
+        </div>
     </div>
 </section>
     </section>
@@ -2518,7 +2669,7 @@
             </div>
             <div class="footer__messages">
                 <div class="footer__box">
-                    <a href="https://www.facebook.com/" class="footer__link">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__link">
                         <button class="footer__facebook" role="button">
                             <img src="/facebook-for-footer.c097708c.svg" role="img" title="Facebook" alt="Facebook" class="footer__icon">
                         </button>
@@ -2526,14 +2677,14 @@
 
                 </div>
                 <div class="footer__box">
-                    <a href="https://vk.com" class="footer__link">
+                    <a href="https://vk.com" target="_blank" class="footer__link">
                         <button class="footer__vk">
                             <img src="/vk-for-footer.a5d70747.svg" role="img" title="VK" alt="VK" class="footer__icon">
                         </button>
                     </a>
                 </div>
                 <div class="footer__box">
-                    <a href="mailto:exemple@google-exemple.com?subject=Заказ" class="footer__link">
+                    <a target="_blank" href="mailto:exemple@google-exemple.com?subject=Заказ" class="footer__link">
                         <button class="footer__google">
                             <img src="/google-for-footer.6b734307.svg" role="img" title="Google" alt="Google" class="footer__icon">
                         </button>

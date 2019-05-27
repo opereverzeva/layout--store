@@ -1,15 +1,13 @@
 .brend{
-    width 100%
     background-color: var(--main-color)
-    
-    clear: both
-    // min-height: 50px
-    position: relative
+    &__container{
+        position relative
+        display: grid
+        grid-template-columns: 78% 22%
+    }
     &__section{
-    float left
-    width 752px
-    margin: 30px 20px 40px 16px
-    position: relative
+        margin: 30px 20px 40px 16px
+        position: relative
     }
     &__menu{
         color var(--main-text-color)
@@ -76,8 +74,9 @@
         padding-bottom 15px
     }
     &__text{
-        padding 0
+        padding 0 20px 0 0
         margin 0
+        // width 78%
     }
     &__advertising{
         background-color #C4C4C4
@@ -89,5 +88,8 @@
         top 0
         right 0
         margin: 30px 20px 40px 20px
+        @media desktop{
+            display none    
+        }
     }
 }

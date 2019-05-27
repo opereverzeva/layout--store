@@ -93,6 +93,23 @@ $(() => {
         $('.hidden').removeClass('hidden_active')
     });
 
+    //  ИЗМЕНЕНИЕ КОЛИЧЕСТВА ТОВАРА
+    $('#minus').click(function () {
+        var $output = $(this).parent().find('output');
+        var t = count = parseInt($output.val())
+        var count = parseInt($output.val()) - 1;
+        count = count < 1 ? 1 : count;
 
+        $output.val(count);
+        $output.change();
+        return false;
+    });
+    $('#plus').click(function () {
+        var $output = $(this).parent().find('output');
+        $output.val(parseInt($output.val()) + 1);
+        console.log($output.val)
+        $output.change();
+        return false;
+    });
 
 })
