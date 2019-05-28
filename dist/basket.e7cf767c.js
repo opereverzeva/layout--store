@@ -117,27 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../components/block/navbar.js":[function(require,module,exports) {
-$(".navbar__burger").click(function () {
-  $('.navbar__box_burger').addClass('navbar__box_hidden');
-  $('.navbar__open-menu').addClass('navbar__open-menu_active');
-}); // закрытие бургер меню
+})({"../components/block/basket.js":[function(require,module,exports) {
+var global = arguments[3];
+if (!global.PARAMETR_BASKET_MODULE) {
+  global.PARAMETR_BASKET_MODULE = true;
+  $(function () {
+    $(".parametr__button").click(function (event) {
+      console.log(this);
+      console.log('Open'); // $(this).toggleClass('parametr__button_open')
 
-function closeBurgerMenu() {
-  $('.navbar__box_burger.navbar__box_hidden').removeClass('navbar__box_hidden');
-  $('.navbar__open-menu.navbar__open-menu_active').removeClass('navbar__open-menu_active');
+      var $wrapper = $(this).parent().parent().parent().parent().parent();
+      console.log($wrapper, $('.basket__box', $wrapper));
+      $('.basket__box', $wrapper).toggleClass('basket__box_active'); // console.log($(this).hasClass('basket__box_active'))
+    });
+  });
 }
-
-$('.burger-menu__close').click(function (event) {
-  event.stopPropagation(); //запрет всплытия событий
-
-  closeBurgerMenu();
-});
-$(".burger-menu__list").on('click', function (event) {
-  // event.preventDefault()
-  event.stopPropagation();
-  closeBurgerMenu();
-});
 },{}],"../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -341,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../components/block/navbar.js"], null)
-//# sourceMappingURL=/navbar.599e4af7.js.map
+},{}]},{},["../../../../.nvm/versions/node/v11.12.0/lib/node_modules/parcel/src/builtins/hmr-runtime.js","../components/block/basket.js"], null)
+//# sourceMappingURL=/basket.e7cf767c.js.map

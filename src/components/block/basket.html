@@ -1,4 +1,5 @@
 <section class="basket">
+
     <div class="container">
         <nav class="basket__nav">
             <extends src="./src/components/elements/basket-title.html">
@@ -9,10 +10,18 @@
                 <extends src="./src/components/block/basket-form.html">
                 </extends>
             </div>
-            <div class="basket__box">
-                <extends src="./src/components/block/basket-list.html">
-                </extends>
+            <div>
+                <div class="basket__dropdown">
+                    <extends src="./src/components/elements/parametr.html">
+                        <block name="parametr-name">Список покупок</block>
+                    </extends>
+                </div>
+                <div class="basket__box">
+                    <extends src="./src/components/block/basket-list.html">
+                    </extends>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<script src="../components/block/basket.js"></script>

@@ -35,8 +35,7 @@
         color: var(--price-color)
     }
     &__article{
-        width 684px
-        margin 0 48px 30px 0
+         margin 0 48px 30px 0
     }
     &__list{
         list-style none
@@ -56,11 +55,15 @@
             padding-bottom 0    
         }
         &::before{
-            content: counter(num) ' |'
+            content: counter(num)
             counter-increment: num  
+            width 15px
+            padding-right 5px
+            height 22px
+            border-right: 4px solid black
             font-size: 22px
             color: var(--price-color)
-            line-height 32px
+            line-height 22px
             font-weight 900
             display inline
         }
@@ -74,7 +77,8 @@
         }
     }
     &__item-pay{
-        padding-bottom 30px
+        margin 0
+        padding 0
         display flex
         justify-content flex-start
         align-items flex-start
@@ -88,6 +92,11 @@
         display flex
         justify-content: center
         align-items: center
+        cursor pointer
+        &:hover{
+            border-radius: 50%
+            background-color var(--heart-active-color)    
+        }
     }
     &__min-head{
         margin 0
@@ -97,6 +106,8 @@
         margin 0
         padding: 0 0 16px 0
         color: #626262;
+        font-size: 14px
+        line-height: 24px
         &_with-icon{
             margin-left -36px
             display flex

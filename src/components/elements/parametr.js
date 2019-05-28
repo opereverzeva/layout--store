@@ -16,15 +16,5 @@ if (!global.PARAMETR_MODULE) {
 
         });
 
-        //закрытие списка 
-        // $(".parametr__button").click(function (event) {
-        //     console.log('Remove')
-        //     event.preventDefault();
-        //     event.stopPropagation();
-        //     $(this).removeClass('parametr__button_open')
-        //     $('.other-parametrs__view').removeClass('other-parametrs__view_active')
-        // })
-
-
     })
 }

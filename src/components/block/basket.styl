@@ -12,11 +12,36 @@
         display flex
         justify-content: space-between
         padding: 0 16px
+        @media desktop {
+            flex-direction: column
+        }
     }
     &__form{
         width 416px
+        @media desktop {
+            width 100%
+        }
     }
     &__box{
         width 568px
+        @media desktop {
+            width 100%
+            display: none
+            // padding 16px
+            }
+    &_active{
+          @media desktop {
+                display block
+                border-bottom: 1px solid #cdd8da;
+            }
+        }
+
+    }
+    &__dropdown{
+        display none
+        @media desktop {
+            margin: 44px -16px 0 -16px
+            display block
+        }    
     }
 }

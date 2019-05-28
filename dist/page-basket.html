@@ -2119,6 +2119,7 @@
     <script src="/menu.b23da4b8.js"></script>
 </nav>
             <section class="basket">
+
     <div class="container">
         <nav class="basket__nav">
             <div class="basket-title__menu" role="heading">
@@ -2157,23 +2158,48 @@
     <div class="basket-form__option">
         <input type="radio" name="delivery" id="delivery" class="basket-form__radio">
         <label for="delivery" class="basket-form__name-radio">
-            <h3 class="basket-form__radio-title">Доставка</h3>
-            <p class="basket-form__radio-description">
-                Осуществляется в течении 1-2 дней с момента подтверждения заказа.
-            </p>
+            <div class="basket-form__box">
+                <h3 class="basket-form__radio-title">Доставка</h3>
+                <p class="basket-form__radio-description">
+                    Осуществляется в течении 1-2 дней с момента подтверждения заказа.
+                </p>
+            </div>
         </label>
         <input type="radio" name="delivery" id="no-delivery" class="basket-form__radio">
         <label for="no-delivery" class="basket-form__name-radio">
-            <h3 class="basket-form__radio-title">Самовывоз</h3>
-            <p class="basket-form__radio-description">
-                Вы можете самостоятельно забрать заказ из нашего магазина
-            </p>
+            <div class="basket-form__box">
+                <h3 class="basket-form__radio-title">Самовывоз</h3>
+                <p class="basket-form__radio-description">
+                    Вы можете самостоятельно забрать заказ из нашего магазина
+                </p>
+            </div>
         </label>
     </div>
 </form>
             </div>
-            <div class="basket__box">
-                <form action="" class="basket-list">
+            <div>
+                <div class="basket__dropdown">
+                    <div class="parametr">
+    <div class="container">
+        <div class="parametr__content">
+            <div class="parametr__date">
+                <div class="parametr__title">
+                    <block name="parametr-name">Список покупок</block>
+                </div>
+                <div class="parametr__amount">
+                    <block name="parametr-amount"></block>
+                </div>
+            </div>
+            <button class="parametr__button">
+                <img src="/open.a5f4ad1a.svg" alt="open" title="open" class="parametr__button-img">
+            </button>
+        </div>
+    </div>
+</div>
+<script src="/parametr.d481f9bc.js"></script>
+                </div>
+                <div class="basket__box">
+                    <form action="" class="basket-list">
     <div class="basket-list__total">
         <span class="basket-list__num">15</span>
         товаров
@@ -2207,6 +2233,7 @@
                 </p>
             </div>
         </div>
+
         <div class="basket-list__box">
             <h3 class="basket-list__title">
                 Зеркало в раме без подсветки Burlington M6OO 60 см
@@ -2298,10 +2325,12 @@
         </a>
     </button>
 </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<script src="/basket.e7cf767c.js"></script>
 
 
         </div>
@@ -2450,9 +2479,10 @@
     </div>
 </nav>
 <script src="/navbar.599e4af7.js"></script>
-            <section class="basket-m">
+            <section class="basket">
+
     <div class="container">
-        <nav class="basket-m__nav">
+        <nav class="basket__nav">
             <div class="basket-title__menu" role="heading">
     <ul class="basket-title__menu-list">
         <li class="basket-title__menu-item">
@@ -2470,11 +2500,11 @@
     </ul>
 </div>
 <h2 class="basket-title__title-page">
-    Оформление заказа
+    Корзина
 </h2>
         </nav>
-        <div class="basket-m__content">
-            <div class="basket-m__form">
+        <div class="basket__content">
+            <div class="basket__form">
                 <form action="" class="basket-form">
     <label for="#name" class="basket-form__name">Ваше имя</label>
     <input type="text" name="name" id="name" class="basket-form__input">
@@ -2489,23 +2519,28 @@
     <div class="basket-form__option">
         <input type="radio" name="delivery" id="delivery" class="basket-form__radio">
         <label for="delivery" class="basket-form__name-radio">
-            <h3 class="basket-form__radio-title">Доставка</h3>
-            <p class="basket-form__radio-description">
-                Осуществляется в течении 1-2 дней с момента подтверждения заказа.
-            </p>
+            <div class="basket-form__box">
+                <h3 class="basket-form__radio-title">Доставка</h3>
+                <p class="basket-form__radio-description">
+                    Осуществляется в течении 1-2 дней с момента подтверждения заказа.
+                </p>
+            </div>
         </label>
         <input type="radio" name="delivery" id="no-delivery" class="basket-form__radio">
         <label for="no-delivery" class="basket-form__name-radio">
-            <h3 class="basket-form__radio-title">Самовывоз</h3>
-            <p class="basket-form__radio-description">
-                Вы можете самостоятельно забрать заказ из нашего магазина
-            </p>
+            <div class="basket-form__box">
+                <h3 class="basket-form__radio-title">Самовывоз</h3>
+                <p class="basket-form__radio-description">
+                    Вы можете самостоятельно забрать заказ из нашего магазина
+                </p>
+            </div>
         </label>
     </div>
 </form>
             </div>
-            <div class="basket-m__box">
-                <div class="parametr">
+            <div>
+                <div class="basket__dropdown">
+                    <div class="parametr">
     <div class="container">
         <div class="parametr__content">
             <div class="parametr__date">
@@ -2523,7 +2558,9 @@
     </div>
 </div>
 <script src="/parametr.d481f9bc.js"></script>
-                <form action="" class="basket-list">
+                </div>
+                <div class="basket__box">
+                    <form action="" class="basket-list">
     <div class="basket-list__total">
         <span class="basket-list__num">15</span>
         товаров
@@ -2557,6 +2594,7 @@
                 </p>
             </div>
         </div>
+
         <div class="basket-list__box">
             <h3 class="basket-list__title">
                 Зеркало в раме без подсветки Burlington M6OO 60 см
@@ -2648,10 +2686,12 @@
         </a>
     </button>
 </form>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<script src="/basket.e7cf767c.js"></script>
 
 
         </div>

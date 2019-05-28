@@ -2119,42 +2119,44 @@
     <script src="/menu.b23da4b8.js"></script>
 </nav>
         <div class="container">
-    <div class="sale-ok__menu" role="heading">
-        <ul class="sale-ok__menu-list">
-            <li class="sale-ok__menu-item">
-                <a href="/index.html" class="sale-ok__name">
-                    Главная
-                </a>
-            </li>
-            <li class="sale-ok__menu-item">
-                <a href="" class="sale-ok__name">
-                    &bull;
-                </a>
-            </li>
-            <li class="sale-ok__menu-item">
-                <a href="/page-basket.html" class="sale-ok__name">
-                    Корзина
-                </a>
-            </li>
-        </ul>
+    <div class="sale-ok__container">
+        <div class="sale-ok__menu" role="heading">
+            <ul class="sale-ok__menu-list">
+                <li class="sale-ok__menu-item">
+                    <a href="/index.html" class="sale-ok__name">
+                        Главная
+                    </a>
+                </li>
+                <li class="sale-ok__menu-item">
+                    <a href="" class="sale-ok__name">
+                        &bull;
+                    </a>
+                </li>
+                <li class="sale-ok__menu-item">
+                    <a href="/page-basket.html" class="sale-ok__name">
+                        Корзина
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <h2 class="sale-ok__title-page">
+            Оформление заказа
+        </h2>
+        <section class="sale-ok__card">
+            <img src="/ok-for-ended-buy.8526afcf.svg" title="Ok" alt="Ok" class="sale-ok__ok">
+            <h1 class="sale-ok__head">
+                Заказ оформлен
+            </h1>
+            <p class="sale-ok__description">
+                Наш менеджер свяжется с вами в ближайшее время.
+            </p>
+        </section>
+        <button type="button" class="sale-ok__button">
+            <a href="/index.html" class="sale-ok__link">
+                на главную
+            </a>
+        </button>
     </div>
-    <h2 class="sale-ok__title-page">
-        Оформление заказа
-    </h2>
-    <section class="sale-ok__card">
-        <img src="/ok-for-ended-buy.8526afcf.svg" title="Ok" alt="Ok" class="sale-ok__ok">
-        <h1 class="sale-ok__head">
-            Заказ оформлен
-        </h1>
-        <p class="sale-ok__description">
-            Наш менеджер свяжется с вами в ближайшее время.
-        </p>
-    </section>
-    <button type="button" class="sale-ok__button">
-        <a href="/index.html" class="sale-ok__link">
-            на главную
-        </a>
-    </button>
 </div>
 
 
@@ -2169,9 +2171,11 @@
         <div class="modal-sale-ok__amount">
             <p class="modal-sale-ok__amount-title">Количество</p>
             <div class="modal-sale-ok__change">
-                <button class="modal-sale-ok__change-button modal-sale-ok__change-button_minus">-</button>
-                <div class="modal-sale-ok__change-item">7</div>
-                <button class="modal-sale-ok__change-button modal-sale-ok__change-button__plus">+</button>
+                <form class="main-parametr-goods__change">
+                    <input id="minus-m" value="-" type="button" class="main-parametr-goods__change-button main-parametr-goods__change-button_minus">
+                    <output class="main-parametr-goods__change-item" name="result">7</output>
+                    <input id="plus-m" value="+" type="button" class="main-parametr-goods__change-button main-parametr-goods__change-button__plus">
+                </form>
             </div>
         </div>
         <div class="modal-sale-ok__sum">
