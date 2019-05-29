@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/style.0cb376f7.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/owl.carousel.min.ea2cb3a7.js"></script>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <title>Story</title>
 <script src="/style.0cb376f7.js"></script></head>
 
@@ -2430,37 +2431,37 @@
             <div class="owl-stage-outer">
                 <div class="owl-stage">
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend1-for-slider.d12832b1.png" title="Brend1" alt="Brend1" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend2-for-slider.87859e6c.png" title="Brend2" alt="Brend2" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend3-for-slider.680460d2.png" title="Brend3" alt="Brend3" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend4-for-slider.c4e6281f.png" title="Brend4" alt="Brend4" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend5-for-slider.8e3c5bfa.png" title="Brend5" alt="Brend5" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend6-for-slider.3c892d20.png" title="Brend6" alt="Brend6" class="slider-brend__brend-img">
                         </a>
                     </div>
                     <div class="owl-item">
-                        <a href="#" class="slider-brend__brend-link">
+                        <a href="/page-brend.html" class="slider-brend__brend-link">
                             <img src="/brend7-for-slider.c7938883.png" title="Brend7" alt="Brend7" class="slider-brend__brend-img">
                         </a>
                     </div>
@@ -2472,6 +2473,7 @@
             <img src="/button-pre-for-slider.97562edd.svg" alt="next" class="slider-brend__next">
         </button>
 
+        <!-- скрипт для слайдера -->
         <script>$('.owl-carousel').owlCarousel({
   loop: true,
   //Зацикливаем слайдер
@@ -2481,9 +2483,6 @@
   //Отступ от элемента справа в 50px
   nav: false,
   //Включение навигации
-  // navText: ["<img src='./components/icons/button-pre-for-slider.svg'>",
-  //     "<img src='./components/icons/button-pre-for-slider.svg'>"
-  // ],
   dots: false,
   rewind: true,
   autoplay: true,
@@ -2521,13 +2520,76 @@ $(".slider-brend__prev").click(function () {
         </aside>
         <section class="contact container">
     <div class="contact__map">
-        <iframe class="contact__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A53aaa6bb81412642f39ee7c0599cac9b48bd37468770f76ae4f043d87138c4fa&amp;source=constructor" frameborder="0"></iframe>
-    </div>
-    <div class="contact__info">
-        <p class="contact__title">Наш адрес</p>
-        <address class="contact__address">Санкт-Петербург, Ленинский проспект, дом 114</address>
-    </div>
-</section>
+        <div id="map"></div>
+        <!-- <iframe class="contact__iframe"
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A53aaa6bb81412642f39ee7c0599cac9b48bd37468770f76ae4f043d87138c4fa&amp;source=constructor"
+            frameborder="0"></iframe>
+    </div> -->
+        <div class="contact__info">
+            <p class="contact__title">Наш адрес</p>
+            <address class="contact__address">Санкт-Петербург, Ленинский проспект, дом 114</address>
+        </div>
+</div></section>
+<script>ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.852383, 30.244268],
+    zoom: 16,
+    behaviors: ['default', 'scrollZoom', 'zoomControl'],
+    controls: []
+  }, {
+    searchControlProvider: 'yandex#search'
+  }),
+      myPlacemark = new ymaps.Placemark([59.852383, 30.244268], {
+    balloonContentBody: "<div class='ballon-point'><div class='ballon-img'><img src='https://pp.userapi.com/c851132/v851132592/129fe6/4ftVgwADF5s.jpg' alt='logo'/></div><div class='ballon-content'>Санкт-Петербург, Ленинский проспект, дом 114</div></div>"
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'https://pp.userapi.com/c851016/v851016592/12f467/e8Q0Kr1rVfM.jpg',
+    iconImageSize: [34, 42] // iconImageOffset: [-33, -90]
+
+  }); // Создадим пользовательский макет ползунка масштаба.
+
+  ZoomLayout = ymaps.templateLayoutFactory.createClass("<div>" + "<div id='zoom-in' >+</div><br>" + "<div id='zoom-out' >-</div>" + "</div>", {
+    // Переопределяем методы макета, чтобы выполнять дополнительные действия
+    // при построении и очистке макета.
+    build: function build() {
+      // Вызываем родительский метод build.
+      ZoomLayout.superclass.build.call(this); // Привязываем функции-обработчики к контексту и сохраняем ссылки
+      // на них, чтобы потом отписаться от событий.
+
+      this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
+      this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this); // Начинаем слушать клики на кнопках макета.
+
+      $('#zoom-in').bind('click', this.zoomInCallback);
+      $('#zoom-out').bind('click', this.zoomOutCallback);
+    },
+    clear: function clear() {
+      // Снимаем обработчики кликов.
+      $('#zoom-in').unbind('click', this.zoomInCallback);
+      $('#zoom-out').unbind('click', this.zoomOutCallback); // Вызываем родительский метод clear.
+
+      ZoomLayout.superclass.clear.call(this);
+    },
+    zoomIn: function zoomIn() {
+      var map = this.getData().control.getMap();
+      map.setZoom(map.getZoom() + 1, {
+        checkZoomRange: true
+      });
+    },
+    zoomOut: function zoomOut() {
+      var map = this.getData().control.getMap();
+      map.setZoom(map.getZoom() - 1, {
+        checkZoomRange: true
+      });
+    }
+  }), zoomControl = new ymaps.control.ZoomControl({
+    options: {
+      layout: ZoomLayout
+    }
+  });
+  myMap.controls.add(zoomControl);
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom');
+});</script>
     </div>
 
     <footer class="footer">
