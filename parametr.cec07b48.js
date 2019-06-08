@@ -2,4 +2,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 var global = arguments[3];
 var t=arguments[3];t.PARAMETR_MODULE||(t.PARAMETR_MODULE=!0,$(function(){$(".parametr__button").click(function(t){console.log(this),console.log("Open"),$(this).toggleClass("parametr__button_open"),$(".other-parametrs__view",$(this).parent().parent().parent().parent()).toggleClass("other-parametrs__view_active")})}));
 },{}]},{},["fibc"], null)
-//# sourceMappingURL=/parametr.cec07b48.js.map
+//# sourceMappingURL=parametr.cec07b48.js.map

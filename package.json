@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "parcel build ./src/html/index.html",
-    "build:git": "parcel build ./src/html/index.html -d .",
+    "build:git": "parcel build ./src/html/index.html -d . --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

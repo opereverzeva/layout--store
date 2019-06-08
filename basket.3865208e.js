@@ -2,4 +2,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 var global = arguments[3];
 var t=arguments[3];t.PARAMETR_BASKET_MODULE||(t.PARAMETR_BASKET_MODULE=!0,$(function(){$(".parametr__button").click(function(t){console.log(this),console.log("Open");var e=$(this).parent().parent().parent().parent().parent();console.log(e,$(".basket__box",e)),$(".basket__box",e).toggleClass("basket__box_active")})}));
 },{}]},{},["PHDW"], null)
-//# sourceMappingURL=/basket.3865208e.js.map
+//# sourceMappingURL=basket.3865208e.js.map
